@@ -1,0 +1,6 @@
+{
+    "Tooltip_item_RR_ModelManual_GP7": "The builder's operating manual for one class of locomotive:<br>controls, starting, running, what to do when she will not.<br>Read it and you can run a GP7 light engine.",
+    "Tooltip_item_RR_TrainHandlingBook": "The company book: the automatic brake, slack, grades, signals.<br>The brake handle you already know stops the locomotive and<br>nothing else. A train is stopped down the brake pipe, and<br>getting that wrong is what runs a grade away from you.<br>Long enough to take several sittings.<br>Teaches working a train: couplers, and the brake that<br>reaches the cars.",
+    "Tooltip_Recipe_RR_Operate_GP7": "You can start and drive a GP7 light engine.",
+    "Tooltip_Recipe_RR_TrainHandling": "You can couple cars and handle a train on the automatic brake."
+}

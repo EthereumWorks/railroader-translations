@@ -1,0 +1,6 @@
+{
+    "UI_prof_Railroader": "Railroader",
+    "UI_prof_RailroaderDesc": "Can start and drive any locomotive without reading its manual. Better at cold starts.",
+    "UI_trait_RRRailroader": "Locomotive Engineer",
+    "UI_trait_RRRailroader_Desc": "Qualified on any locomotive without reading its manual.<br>A cold diesel catches more often, and a start that misses costs half the battery."
+}

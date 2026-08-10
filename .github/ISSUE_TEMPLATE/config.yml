@@ -1,0 +1,7 @@
+blank_issues_enabled: true
+contact_links:
+  - name: A bug in the mod (not the text)
+    url: https://steamcommunity.com/sharedfiles/filedetails/?id=3774360904
+    about: >-
+      This repository holds only the mod's text. Crashes, physics, sound and
+      everything else belong in the Workshop item's discussions.

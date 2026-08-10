@@ -1,0 +1,7 @@
+# The game reads these as UTF-8 and does not care about line endings, but a
+# Windows editor that rewrites every line to CRLF turns a two-line fix into a
+# 120-line diff nobody can review.
+*.json  text eol=lf
+*.md    text eol=lf
+*.py    text eol=lf
+*.yml   text eol=lf

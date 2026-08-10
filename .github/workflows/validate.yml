@@ -1,0 +1,35 @@
+name: check translations
+
+# Runs the same script a contributor is asked to run locally
+# (tools/check_translation.py). It cannot judge whether the language is any good --
+# only whether it would load, whether it says the same things as the English, and
+# whether it fits inside the boxes the game draws it in.
+
+on:
+  pull_request:
+    paths:
+      - 'Translate/**'
+      - 'tools/check_translation.py'
+  push:
+    branches: [ main ]
+    paths:
+      - 'Translate/**'
+      - 'tools/check_translation.py'
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: every language in the repository
+        run: python tools/check_translation.py
+
+      - name: draw the notebook pages (for the reviewer to look at)
+        if: always()
+        run: python tools/check_translation.py --pages || true
