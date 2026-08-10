@@ -193,12 +193,15 @@ def check_value(lang, fname, key, en, tr, rep):
         rep.warn(lang, where, "empty -- the game will show the English text here")
         return
 
-    # A real line break inside a value breaks the maintainer's tooling (the mod's
-    # test suite reads these files line by line) and is not the mod's convention.
+    # A JSON "\n" escape does render as a break in-game, but it is not this mod's
+    # convention and it breaks the tooling around it: the suite reads these files a
+    # line at a time, so a value that spans lines is a value it cannot see. Write
+    # "\\n" (backslash, n) in the file, the way the English does.
     if "\n" in tr:
         rep.error(lang, where,
-                  "contains a real line break. Write a break as \\\\n in the file "
-                  "(two characters: backslash, n) -- that is what the mod unescapes.")
+                  "spans more than one line in the file. Write a break as \\\\n "
+                  "(backslash, n) inside the string, exactly as the English does -- "
+                  "not as a JSON \\n escape and never by pressing Enter.")
 
     if key in KEEP_VERBATIM:
         if tr != en:
@@ -220,6 +223,16 @@ def check_value(lang, fname, key, en, tr, rep):
                   "lost the key name(s) %s -- W/S/R/E/V/Q/L/F are the keys on the "
                   "player's keyboard and are the same in every language"
                   % ", ".join("[" + m + "]" for m in missing))
+
+    # "PRESS W" -- the word is translated, the letter is a key on the keyboard. It
+    # has no brackets to recognise it by, so the rule is by key prefix.
+    if key.startswith("IGUI_RR_Hint"):
+        lost = [c for c in re.findall(r"\b([A-Z])\b", en) if c not in tr]
+        if lost:
+            rep.error(lang, where,
+                      "lost the key %s. The player presses that letter on his "
+                      "keyboard; translate the word, keep the letter."
+                      % ", ".join(lost))
 
     if "<br>" in en and "<br>" not in tr:
         rep.warn(lang, where,
