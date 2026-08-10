@@ -190,7 +190,10 @@ def check_value(lang, fname, key, en, tr, rep):
     where = "%s/%s" % (fname, key)
 
     if tr == "":
-        rep.warn(lang, where, "empty -- the game will show the English text here")
+        # The translator's own credit page is empty in English too, and empty there
+        # means "there is no such page", not "fall back to the English".
+        if key != CREDIT_KEY:
+            rep.warn(lang, where, "empty -- the game will show the English text here")
         return
 
     # A JSON "\n" escape does render as a break in-game, but it is not this mod's
