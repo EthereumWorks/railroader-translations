@@ -27,7 +27,7 @@ You are credited in four places (below), and you never have to maintain anything
 
 | | |
 |---|---|
-| `Translate/EN/` | the source text — **118 strings, about 24 KB** |
+| `Translate/EN/` | the source text — **158 strings, about 13 KB** |
 | `Translate/RU/` | Russian, as a worked example of how far you may go from the English |
 | [`KEYS.md`](KEYS.md) | every string, what it is for, and what it has to fit inside |
 | [`GLOSSARY.md`](GLOSSARY.md) | the railroad words, explained — read this before translating "reverser" |
@@ -41,8 +41,8 @@ of it to translate the mod, and it stays where it is.
 
 ## How big is the job?
 
-118 strings. Roughly a third of them are two or three words on the control stand
-(`THROTTLE`, `BATT`, `RUN 5`); a third are one-line messages; and **nine of them are
+158 strings. Roughly a third of them are two or three words on the control stand
+(`THROTTLE`, `BATT`, `RUN 5`); a third are one-line messages; and **ten of them are
 whole pages of the engineer's notebook**, which is the mod's in-game manual and about
 half of all the words. A careful translator with the game installed spends an evening
 on it, not a week.

@@ -2,7 +2,7 @@
 
 Generated from the mod by `tools/sync_translations.py` -- do not edit by hand.
 
-119 strings in 6 files. The Russian column is not a second source: it is there as a worked example of how far you may go from the English (abbreviations on the control stand, a driver's word where English uses two).
+158 strings in 6 files. The Russian column is not a second source: it is there as a worked example of how far you may go from the English (abbreviations on the control stand, a driver's word where English uses two).
 
 A key with an empty value is deliberate -- an empty string means *use the English*, and it is the honest way to leave one alone.
 
@@ -78,6 +78,13 @@ RU  НЕИСПРАВЕН - локомотив изношен (состояние
 ```
 EN  DERAILED - the locomotive has left the rails
 RU  СОШЁЛ С РЕЛЬСОВ - локомотив вне путей
+```
+
+### `IGUI_RR_Passenger`
+
+```
+EN  PASSENGER - you are riding, not driving
+RU  ПАССАЖИР - вы едете, но не ведёте
 ```
 
 ### `IGUI_RR_Stalled`
@@ -160,21 +167,21 @@ RU  (нет питания - свет не загорится)
 
 ```
 EN  Cab light on
-RU  Включить свет в кабине
+RU  Свет в кабине включён
 ```
 
 ### `IGUI_RR_CabLightOff`
 
 ```
 EN  Cab light off
-RU  Выключить свет в кабине
+RU  Свет в кабине выключен
 ```
 
 ### `IGUI_RR_BoardCab`
 
 ```
-EN  Climb into the cab
-RU  Забраться в кабину
+EN  Sit in the driver's seat
+RU  Сесть на место машиниста
 ```
 
 ### `IGUI_RR_PadBrakeOn`
@@ -793,6 +800,7 @@ EN  Hold [Q] - horn.
     Dim is a shorter beam, for meeting a train.
     It burns off the end the reverser has picked.
     [Shift+F] - cab dome light.
+    By its light you can read in the cab at night.
     Lights drain the battery.
     PAD: left bumper - horn. Right - bell.
     The headlight is on the cab menu.
@@ -804,6 +812,7 @@ RU  [Q] держать -- тифон.
     Тусклый -- короткий луч, для встречного.
     Светит с того конца, куда стоит реверсор.
     [Shift+F] -- плафон в кабине.
+    При нём ночью можно читать в кабине.
     Свет сажает батарею.
     ГЕЙМПАД: левый бампер -- тифон, правый -- колокол.
     Прожектор -- в меню кабины.
@@ -853,10 +862,11 @@ EN  SWITCHES
     Fence, sign, cone, door, tree - smashed.
     Concrete - near stop, can be pushed through.
     Car on a crossing - crumpled and thrown off.
+    On a server she destroys it instead, and
+    below about 4 m/s she stops at it.
     Freight car, locomotive - hard stop.
     Every hit takes condition (COND).
-    Condition 0 - OUT OF ORDER, engine dies,
-    no repair exists.
+    Condition 0 - OUT OF ORDER, engine dies.
 RU  СТРЕЛКИ
     Правой кнопкой по стрелке -> «Стрелка»:
     на главный путь (прямо) или на боковой.
@@ -865,10 +875,41 @@ RU  СТРЕЛКИ
     Забор, знак, конус, дверь, дерево -- сносит.
     Бетон -- почти стоп, продавливается.
     Машина на переезде -- сминает и отбрасывает.
+    На сервере -- уничтожает, а медленнее
+    примерно 4 м/с -- просто встаёт перед ней.
     Вагон, локомотив -- жёсткий стоп.
     Каждый удар снимает состояние (СОСТ).
-    Состояние 0 -- НЕИСПРАВЕН, дизель глохнет,
-    ремонта нет.
+    Состояние 0 -- НЕИСПРАВЕН, дизель глохнет.
+```
+
+### `IGUI_RR_Note_Repair`
+
+```
+EN  REPAIR
+    Right-click her -> 'Repair locomotive
+    with a wrench'. Five minutes of work,
+    +5% of condition, one point off the wrench.
+    Twenty passes bring her back from zero;
+    a wrench is good for nine of them.
+    No skill, no depot, no parts needed.
+    Duct tape works too: +0.5% a strip, four
+    strips to a roll, and it refuses above 10%.
+    Enough to get a dead engine turning over
+    and limp to the depot. At 10% she pulls
+    badly and stalls.
+RU  РЕМОНТ
+    Правой кнопкой по локомотиву ->
+    «Отремонтировать локомотив ключом».
+    Пять минут работы, +5% состояния,
+    один пункт с прочности ключа.
+    От нуля до целого -- двадцать подходов;
+    ключа хватает на девять.
+    Ни навыка, ни депо, ни запчастей не надо.
+    Изолента тоже годится: +0,5% за раз,
+    четыре раза на моток, выше 10% -- отказ.
+    Хватит, чтобы мёртвый дизель завёлся
+    и доползти до депо. На 10% еле тянет
+    и глохнет.
 ```
 
 ### `IGUI_RR_Note_Derail`
@@ -943,6 +984,265 @@ RU  Теперь вы умеете водить %1
 ```
 EN  You have learned train handling and the automatic brake
 RU  Вы изучили вождение поездов и автотормоз
+```
+
+### `IGUI_RR_RideAlong`
+
+```
+EN  Get in the cab as a passenger
+RU  Сесть в кабину как пассажир
+```
+
+### `IGUI_RR_TakeControls`
+
+```
+EN  Take the controls
+RU  Занять пульт
+```
+
+### `IGUI_RR_LeaveControls`
+
+```
+EN  Move to the passenger's spot
+RU  Перейти на место пассажира
+```
+
+### `IGUI_RR_Reject_Unknown`
+
+```
+EN  The server refused that
+RU  Сервер отказал
+```
+
+### `IGUI_RR_Reject_NoLoco`
+
+```
+EN  That locomotive is not there any more
+RU  Этого локомотива больше нет
+```
+
+### `IGUI_RR_Reject_LocoTooFar`
+
+```
+EN  You are too far from the locomotive
+RU  Слишком далеко от локомотива
+```
+
+### `IGUI_RR_Reject_RateLimit`
+
+```
+EN  Too many commands at once - slow down
+RU  Слишком много команд подряд - медленнее
+```
+
+### `IGUI_RR_Reject_Derailed`
+
+```
+EN  She has left the rails - nothing answers
+RU  Сошла с рельсов - ничего не отвечает
+```
+
+### `IGUI_RR_Reject_NotDerailed`
+
+```
+EN  She is on the rails already
+RU  Она и так на рельсах
+```
+
+### `IGUI_RR_Reject_NotAdmin`
+
+```
+EN  Only an admin can put her back on the rails
+RU  Вернуть её на рельсы может только админ
+```
+
+### `IGUI_RR_Reject_DriverTaken`
+
+```
+EN  Somebody else is at the controls
+RU  За контроллером уже кто-то есть
+```
+
+### `IGUI_RR_Reject_DriverSeat`
+
+```
+EN  You are not at the controls
+RU  Вы не за контроллером
+```
+
+### `IGUI_RR_Reject_NoProfession`
+
+```
+EN  You don't know how to run a locomotive
+RU  Вы не умеете водить локомотив
+```
+
+### `IGUI_RR_Reject_TooFastBoard`
+
+```
+EN  She is moving too fast to climb aboard
+RU  Слишком быстро идёт - не сесть
+```
+
+### `IGUI_RR_Reject_TooFastLeave`
+
+```
+EN  Too fast to step off - wait until she slows
+RU  Слишком быстро идёт - не сойти
+```
+
+### `IGUI_RR_Reject_SeatsFull`
+
+```
+EN  There is no room left on her
+RU  Мест на ней больше нет
+```
+
+### `IGUI_RR_Reject_StopToLeave`
+
+```
+EN  Stop her before you leave the driver's seat
+RU  Сначала остановите её, потом вставайте
+```
+
+### `IGUI_RR_Reject_NotAboard`
+
+```
+EN  You are not aboard
+RU  Вас нет на локомотиве
+```
+
+### `IGUI_RR_Reject_SwitchNotFound`
+
+```
+EN  No switch there
+RU  Здесь нет стрелки
+```
+
+### `IGUI_RR_Reject_SwitchTooFar`
+
+```
+EN  You are too far from the switch
+RU  Слишком далеко от стрелки
+```
+
+### `IGUI_RR_Reject_TankTooFar`
+
+```
+EN  You are too far from the tank
+RU  Слишком далеко от цистерны
+```
+
+### `IGUI_RR_Reject_LocoNotAtTank`
+
+```
+EN  The locomotive is not standing at the tank
+RU  Локомотив не стоит у цистерны
+```
+
+### `IGUI_RR_Reject_DieselCan`
+
+```
+EN  There is no diesel in that container
+RU  В этой ёмкости нет дизеля
+```
+
+### `IGUI_RR_Reject_EmptyContainer`
+
+```
+EN  That container will not take diesel
+RU  В эту ёмкость дизель не залить
+```
+
+### `IGUI_RR_Reject_Transfer`
+
+```
+EN  Nothing was transferred
+RU  Ничего не перелилось
+```
+
+### `IGUI_RR_Reject_Wrench`
+
+```
+EN  You have no usable wrench
+RU  Нет годного гаечного ключа
+```
+
+### `IGUI_RR_Reject_WrenchBroken`
+
+```
+EN  That wrench is worn out
+RU  Этот ключ изношен
+```
+
+### `IGUI_RR_RepairOption`
+
+```
+EN  Repair locomotive with a wrench
+RU  Отремонтировать локомотив ключом
+```
+
+### `IGUI_RR_WrenchRequired`
+
+```
+EN  You have no usable wrench
+RU  Нет годного гаечного ключа
+```
+
+### `IGUI_RR_Repaired`
+
+```
+EN  Locomotive repaired (+5%)
+RU  Локомотив отремонтирован (+5%)
+```
+
+### `IGUI_RR_LocoServiced`
+
+```
+EN  She is sound - nothing to repair
+RU  Она исправна - чинить нечего
+```
+
+### `IGUI_RR_TapeOption`
+
+```
+EN  Patch locomotive with duct tape
+RU  Залатать локомотив изолентой
+```
+
+### `IGUI_RR_TapeRequired`
+
+```
+EN  You have no duct tape
+RU  Нет изоленты
+```
+
+### `IGUI_RR_Taped`
+
+```
+EN  Taped up (+0.5%)
+RU  Заклеено (+0,5%)
+```
+
+### `IGUI_RR_Reject_Tape`
+
+```
+EN  You have no duct tape
+RU  Нет изоленты
+```
+
+### `IGUI_RR_Reject_TapeEmpty`
+
+```
+EN  That roll is finished
+RU  Моток кончился
+```
+
+### `IGUI_RR_Reject_TapeCeiling`
+
+```
+EN  Tape will not take her any further
+RU  Дальше изолентой не починить
 ```
 
 ## ItemName.json

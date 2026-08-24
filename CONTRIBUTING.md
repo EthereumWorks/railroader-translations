@@ -25,7 +25,7 @@ before it is work.
 
     Translate/EN/  ->  Translate/<YOUR CODE>/
 
-Six files, 118 strings. Translate the **values**, never the keys:
+Six files, 158 strings. Translate the **values**, never the keys:
 
 ```json
     "IGUI_RR_NoFuel": "No fuel - the engine won't fire",
@@ -86,7 +86,7 @@ headlight). Do the same.
 
 **`GP7` is a locomotive model, not a word.** It stays `GP7` in every language.
 
-**The nine `IGUI_RR_Note_*` strings are whole pages of a paper notebook** — the
+**The `IGUI_RR_Note_*` strings are whole pages of a paper notebook** — the
 mod's in-game manual, and the biggest part of the job. The vanilla journal window
 draws **14 usable lines of about 50 columns** and *silently swallows everything
 past that*: a page that is one line too long simply loses its last fact, with no
