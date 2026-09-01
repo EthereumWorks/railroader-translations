@@ -687,7 +687,7 @@ EN  K&L 800, GP7. Muldraugh depot, covered stall.
     On a controller: interact climbs in and out.
     Her controls are on the pad too - see below.
     On a server: one driver, the rest ride.
-    [V] - take the controls or give them up.
+    Server only: [V] takes or gives up the controls.
     Log out in the cab - your seat is kept.
 RU  K&L 800, GP7. Депо Малдро, крытое стойло.
     Стоит холодной.
@@ -699,7 +699,7 @@ RU  K&L 800, GP7. Депо Малдро, крытое стойло.
     На геймпаде: кнопка действия -- сесть и сойти.
     Органы управления на геймпаде -- дальше.
     На сервере: один ведёт, остальные едут.
-    [V] -- занять пульт или уступить его.
+    Только на сервере: [V] занять/уступить пульт.
     Вышел в кабине -- место за тобой.
 ```
 
