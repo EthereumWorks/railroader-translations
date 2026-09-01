@@ -2,7 +2,7 @@
 
 Generated from the mod by `tools/sync_translations.py` -- do not edit by hand.
 
-158 strings in 6 files. The Russian column is not a second source: it is there as a worked example of how far you may go from the English (abbreviations on the control stand, a driver's word where English uses two).
+161 strings in 6 files. The Russian column is not a second source: it is there as a worked example of how far you may go from the English (abbreviations on the control stand, a driver's word where English uses two).
 
 A key with an empty value is deliberate -- an empty string means *use the English*, and it is the honest way to leave one alone.
 
@@ -135,18 +135,11 @@ RU  (свет включён - посадит аккумулятор)
 > A slice of the cab radial menu. It names WHAT THE CLICK WILL DO, not what is on now.
 
 
-### `IGUI_RR_HeadlightDim`
+### `IGUI_RR_HeadlightOn`
 
 ```
-EN  Turn on the dim beam
-RU  Включить тусклый свет
-```
-
-### `IGUI_RR_HeadlightBright`
-
-```
-EN  Turn on the bright beam
-RU  Включить яркий свет
+EN  Turn the headlight on
+RU  Включить прожектор
 ```
 
 ### `IGUI_RR_HeadlightOff`
@@ -237,6 +230,13 @@ RU  Стрелка переведена: %1
 ```
 
 ### `IGUI_RR_Rerail`
+
+```
+EN  Put it back on the rails
+RU  Поставить обратно на рельсы
+```
+
+### `IGUI_RR_Rerail_Debug`
 
 ```
 EN  Put it back on the rails [debug]
@@ -686,6 +686,9 @@ EN  K&L 800, GP7. Muldraugh depot, covered stall.
     Order: board -> reverser to N -> start [W].
     On a controller: interact climbs in and out.
     Her controls are on the pad too - see below.
+    On a server: one driver, the rest ride.
+    [V] - take the controls or give them up.
+    Log out in the cab - your seat is kept.
 RU  K&L 800, GP7. Депо Малдро, крытое стойло.
     Стоит холодной.
     [E] у борта -- сесть в кабину.
@@ -695,6 +698,9 @@ RU  K&L 800, GP7. Депо Малдро, крытое стойло.
     Порядок: сесть -> реверсор в N -> пуск [W].
     На геймпаде: кнопка действия -- сесть и сойти.
     Органы управления на геймпаде -- дальше.
+    На сервере: один ведёт, остальные едут.
+    [V] -- занять пульт или уступить его.
+    Вышел в кабине -- место за тобой.
 ```
 
 ### `IGUI_RR_Note_Start`
@@ -769,24 +775,24 @@ EN  Six dials: speed, amperes, brake air,
     LAMPS
     HEAD, CAB - a light is on.
     GEN - the diesel is running.
-    BATT: amber - lights will die,
+    BATT: amber - few starts left in her,
     red - the starter will not turn.
     COND: amber - power is dropping,
     red - she can stall on her own.
-RU  Шесть шкал: скорость, амперметр, воздух
+RU  Шесть приборов: скорость, амперметр, воздух
     в тормозе, обороты, топливо, вода.
-    Вода -- температура, не запас.
+    Вода - это температура, а не запас.
     Амперметр = реальная тяга. Контроллер открыт,
-    а стрелка на 0 -- машина не поедет.
-    Пока дизель стоит, квадрант тяги = стартер:
-    ЗАПУСК / ПРОКАЧКА / ПРОКРУТКА / ПРОГРЕВ.
+    а стрелка на 0 - значит она не поедет.
+    С заглушенным дизелем сектор контроллера -
+    это стартер: ПУСК / ПОДКАЧКА / КРУТИТ / ПРОГРЕВ.
     ЛАМПЫ
-    ПРОЖ, КАБ -- свет включён.
-    ГЕН -- дизель работает.
-    АКК: жёлтый -- света не будет,
-    красный -- стартер не провернёт.
-    СОСТ: жёлтый -- тяга падает,
-    красный -- может заглохнуть сама.
+    HEAD, CAB - свет включён.
+    GEN - дизель работает.
+    BATT: жёлтая - пусков осталось мало,
+    красная - стартер не провернётся.
+    COND: жёлтая - мощность падает,
+    красная - может заглохнуть сама.
 ```
 
 ### `IGUI_RR_Note_Signals`
@@ -796,26 +802,30 @@ EN  Hold [Q] - horn.
     [L] - bell, toggles and rings by itself.
     Both run off the compressor: with the diesel
     shut down there are no signals.
-    [F] - headlight: off / dim / bright.
-    Dim is a shorter beam, for meeting a train.
+    [F] - headlight: on / off, as in a car.
     It burns off the end the reverser has picked.
     [Shift+F] - cab dome light.
     By its light you can read in the cab at night.
-    Lights drain the battery.
+    The number boards light the number itself and
+    burn whenever she has any charge at all.
+    Headlight and dome drain the battery; the
+    boards do not. Left on, they will flatten her.
     PAD: left bumper - horn. Right - bell.
     The headlight is on the cab menu.
-RU  [Q] держать -- тифон.
-    [L] -- колокол, включается и звонит сам.
-    Оба работают от компрессора: дизель
-    заглушен -- сигналов нет.
-    [F] -- прожектор: выкл / тусклый / яркий.
-    Тусклый -- короткий луч, для встречного.
-    Светит с того конца, куда стоит реверсор.
-    [Shift+F] -- плафон в кабине.
-    При нём ночью можно читать в кабине.
-    Свет сажает батарею.
-    ГЕЙМПАД: левый бампер -- тифон, правый -- колокол.
-    Прожектор -- в меню кабины.
+RU  Удерживать [Q] - тифон.
+    [L] - колокол, включается и звонит сам.
+    И то и другое от компрессора: с заглушенным
+    дизелем сигналов нет.
+    [F] - прожектор: вкл / выкл, как у машины.
+    Горит с того конца, что выбран реверсором.
+    [Shift+F] - плафон в кабине.
+    При нём ночью в кабине можно читать.
+    Номерные фонари подсвечивают сам номер и
+    горят, пока в батарее есть хоть какой заряд.
+    Прожектор и плафон сажают батарею, номерные
+    фонари - нет. Оставишь свет - не заведётся.
+    ГЕЙМПАД: левый бампер - тифон. Правый - колокол.
+    Прожектор - в меню кабины.
 ```
 
 ### `IGUI_RR_Note_Fuel`
@@ -888,27 +898,27 @@ RU  СТРЕЛКИ
 EN  REPAIR
     Right-click her -> 'Repair locomotive
     with a wrench'. Five minutes of work,
-    +5% of condition, one point off the wrench.
+    +5%% of condition, one point off the wrench.
     Twenty passes bring her back from zero;
     a wrench is good for nine of them.
     No skill, no depot, no parts needed.
-    Duct tape works too: +0.5% a strip, four
-    strips to a roll, and it refuses above 10%.
+    Duct tape works too: +0.5%% a strip, four
+    strips to a roll, and it refuses above 10%%.
     Enough to get a dead engine turning over
-    and limp to the depot. At 10% she pulls
+    and limp to the depot. At 10%% she pulls
     badly and stalls.
 RU  РЕМОНТ
     Правой кнопкой по локомотиву ->
     «Отремонтировать локомотив ключом».
-    Пять минут работы, +5% состояния,
+    Пять минут работы, +5%% состояния,
     один пункт с прочности ключа.
     От нуля до целого -- двадцать подходов;
     ключа хватает на девять.
     Ни навыка, ни депо, ни запчастей не надо.
-    Изолента тоже годится: +0,5% за раз,
-    четыре раза на моток, выше 10% -- отказ.
+    Изолента тоже годится: +0,5%% за раз,
+    четыре раза на моток, выше 10%% -- отказ.
     Хватит, чтобы мёртвый дизель завёлся
-    и доползти до депо. На 10% еле тянет
+    и доползти до депо. На 10%% еле тянет
     и глохнет.
 ```
 
@@ -918,13 +928,19 @@ RU  РЕМОНТ
 EN  DERAILING is permanent.
     1. Broken track (open rail end) at speed.
     2. A very hard impact (about 8 m/s or more).
-    Derailed: engine dead, controls dead,
-    she cannot be put back.
+    Derailed: engine dead, controls dead.
+    Solo: she cannot be put back.
+    On a server: right-click her and put her
+    back on the rails. Temporary - until the
+    proper re-railing gear exists.
 RU  СХОД С РЕЛЬСОВ -- необратим.
     1. Обрыв пути (открытый конец) на скорости.
     2. Очень сильный жёсткий удар (от ~8 м/с).
-    Сошла -- дизель глохнет, управление мертво,
-    обратно не ставится.
+    Сошла -- дизель глохнет, управление мертво.
+    Одиночная игра: обратно не ставится.
+    На сервере: правый клик по ней -- поставить
+    обратно на рельсы. Временно, пока нет
+    настоящего инструмента для накатки.
 ```
 
 > The page that thanks the people who paid for this. Translate the heading and the thank-you line; COPY THE NAMES character for character -- a handle is spelled the way its owner spells it. The suite fails if one is transliterated.
@@ -938,11 +954,13 @@ EN  SUPPORTERS
     Thank you.
     Mudyan
     Sample
+    DrewGoodOne
 RU  ПОДДЕРЖАЛИ ПРОЕКТ
     Люди, поддержавшие мод деньгами.
     Спасибо.
     Mudyan
     Sample
+    DrewGoodOne
 ```
 
 > YOUR OWN CREDIT PAGE, and the only string in this file that is empty on purpose. Write one short page in your language naming yourself as the translator and it becomes the last page of the notebook every player of your language carries; leave it empty and the page is not written at all. Filling it in is how you consent to your name being inside other people's saves -- nobody will add it for you.
@@ -1052,8 +1070,22 @@ RU  Она и так на рельсах
 ### `IGUI_RR_Reject_NotAdmin`
 
 ```
-EN  Only an admin can put her back on the rails
-RU  Вернуть её на рельсы может только админ
+EN  That is an admin command
+RU  Это админская команда
+```
+
+### `IGUI_RR_Reject_NoRerail`
+
+```
+EN  You cannot put her back on the rails
+RU  Вы не можете поставить её обратно на рельсы
+```
+
+### `IGUI_RR_Reject_RerailBusy`
+
+```
+EN  She has only just been put back on the rails - give her a moment
+RU  Её только что поставили на рельсы - дайте ей минуту
 ```
 
 ### `IGUI_RR_Reject_DriverTaken`
@@ -1110,6 +1142,13 @@ RU  Сначала остановите её, потом вставайте
 ```
 EN  You are not aboard
 RU  Вас нет на локомотиве
+```
+
+### `IGUI_RR_Reject_InCab`
+
+```
+EN  Climb out of the cab to work on her
+RU  Выйдите из кабины, чтобы обслуживать локомотив
 ```
 
 ### `IGUI_RR_Reject_SwitchNotFound`
@@ -1192,8 +1231,8 @@ RU  Нет годного гаечного ключа
 ### `IGUI_RR_Repaired`
 
 ```
-EN  Locomotive repaired (+5%)
-RU  Локомотив отремонтирован (+5%)
+EN  Locomotive repaired (+5%%)
+RU  Локомотив отремонтирован (+5%%)
 ```
 
 ### `IGUI_RR_LocoServiced`
@@ -1220,8 +1259,8 @@ RU  Нет изоленты
 ### `IGUI_RR_Taped`
 
 ```
-EN  Taped up (+0.5%)
-RU  Заклеено (+0,5%)
+EN  Taped up (+0.5%%)
+RU  Заклеено (+0,5%%)
 ```
 
 ### `IGUI_RR_Reject_Tape`
