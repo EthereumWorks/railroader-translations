@@ -2,7 +2,7 @@
 
 Generated from the mod by `tools/sync_translations.py` -- do not edit by hand.
 
-161 strings in 6 files. The Russian column is not a second source: it is there as a worked example of how far you may go from the English (abbreviations on the control stand, a driver's word where English uses two).
+336 strings in 6 files. The Russian column is not a second source: it is there as a worked example of how far you may go from the English (abbreviations on the control stand, a driver's word where English uses two).
 
 A key with an empty value is deliberate -- an empty string means *use the English*, and it is the honest way to leave one alone.
 
@@ -15,6 +15,48 @@ A key with an empty value is deliberate -- an empty string means *use the Englis
 ```
 EN  Cab
 RU  Кабина
+```
+
+### `IGUI_ContainerTitle_rrcbcabinet`
+
+```
+EN  Cabinet
+RU  Шкаф
+```
+
+### `IGUI_ContainerTitle_rrcbfridge`
+
+```
+EN  Fridge
+RU  Холодильник
+```
+
+### `IGUI_ContainerTitle_rrcbstove`
+
+```
+EN  Stove
+RU  Печь
+```
+
+### `IGUI_ContainerTitle_rrhold`
+
+```
+EN  Hold
+RU  Трюм
+```
+
+### `IGUI_ContainerTitle_rrcbbodies`
+
+```
+EN  Bodies
+RU  Тела
+```
+
+### `IGUI_ContainerTitle_rrbodies`
+
+```
+EN  Bodies
+RU  Тела
 ```
 
 ### `IGUI_RR_MPOff`
@@ -52,6 +94,13 @@ EN  No fuel - the engine won't fire
 RU  Нет топлива - двигатель не запустится
 ```
 
+### `IGUI_RR_NoCatch`
+
+```
+EN  The engine didn't catch - try again
+RU  Дизель не схватил - попробуйте ещё раз
+```
+
 ### `IGUI_RR_NoFastForward`
 
 ```
@@ -69,8 +118,15 @@ RU  Двигатель заглушен - нет воздуха для тифо�
 ### `IGUI_RR_OutOfOrder`
 
 ```
-EN  OUT OF ORDER - the locomotive is worn out (condition 0)
-RU  НЕИСПРАВЕН - локомотив изношен (состояние 0)
+EN  OUT OF ORDER - the engine is dead, needs parts
+RU  НЕИСПРАВЕН - двигатель мёртв, нужны запчасти
+```
+
+### `IGUI_RR_OutOfOrderFrame`
+
+```
+EN  CAN'T MOVE - the frame is wrecked, weld it
+RU  НЕ МОЖЕТ ЕХАТЬ - рама разбита, нужна сварка
 ```
 
 ### `IGUI_RR_Derailed`
@@ -78,6 +134,20 @@ RU  НЕИСПРАВЕН - локомотив изношен (состояние
 ```
 EN  DERAILED - the locomotive has left the rails
 RU  СОШЁЛ С РЕЛЬСОВ - локомотив вне путей
+```
+
+### `IGUI_RR_CarDerailed`
+
+```
+EN  A car is off the rails - the train cannot move
+RU  Вагон сошёл с рельсов - поезд не может двигаться
+```
+
+### `IGUI_RR_CarDead`
+
+```
+EN  Car %1 is broken down - the train cannot move. Weld its frame
+RU  Вагон %1 неисправен - поезд не может двигаться. Заварите его раму
 ```
 
 ### `IGUI_RR_Passenger`
@@ -177,20 +247,6 @@ EN  Sit in the driver's seat
 RU  Сесть на место машиниста
 ```
 
-### `IGUI_RR_PadBrakeOn`
-
-```
-EN  Brake set
-RU  Тормоз включён
-```
-
-### `IGUI_RR_PadBrakeOff`
-
-```
-EN  Brake released
-RU  Тормоз отпущен
-```
-
 ### `IGUI_RR_LeaveCab`
 
 ```
@@ -232,8 +288,8 @@ RU  Стрелка переведена: %1
 ### `IGUI_RR_Rerail`
 
 ```
-EN  Put it back on the rails
-RU  Поставить обратно на рельсы
+EN  Put it back on the rails [admin]
+RU  Поставить обратно на рельсы [админ]
 ```
 
 ### `IGUI_RR_Rerail_Debug`
@@ -361,6 +417,13 @@ EN  This tank is dry
 RU  Эта цистерна пуста
 ```
 
+### `IGUI_RR_DepotNoPower`
+
+```
+EN  The tank's pump has no power - bring a running generator
+RU  Насос цистерны без питания - нужен работающий генератор рядом
+```
+
 ### `IGUI_RR_DepotTankFull`
 
 ```
@@ -380,13 +443,6 @@ RU  У этой цистерны нет локомотива
 ```
 EN  The battery is fully charged
 RU  Аккумулятор полностью заряжен
-```
-
-### `IGUI_RR_DepotNoPower`
-
-```
-EN  Needs a running generator nearby
-RU  Нужен работающий генератор рядом
 ```
 
 ### `IGUI_RR_DepotFillCan`
@@ -507,6 +563,13 @@ EN  WARMING
 RU  ПРОГРЕВ
 ```
 
+### `IGUI_RR_HudStopping`
+
+```
+EN  STOPPING
+RU  ОСТАНОВ
+```
+
 ### `IGUI_RR_HudRange`
 
 ```
@@ -598,11 +661,11 @@ EN  BATT
 RU  АКК
 ```
 
-### `IGUI_RR_HudLampCond`
+### `IGUI_RR_HudLampEng`
 
 ```
-EN  COND
-RU  СОСТ
+EN  ENG
+RU  ДВИГ
 ```
 
 ### `IGUI_RR_HudStart`
@@ -669,6 +732,20 @@ RU  Заглушить дизель
 ```
 EN  Come to a stop and close the throttle first
 RU  Сначала остановитесь и уберите тягу
+```
+
+### `IGUI_RR_CancelShutdown`
+
+```
+EN  Cancel the shutdown
+RU  Отменить остановку дизеля
+```
+
+### `IGUI_RR_ShutdownCancelled`
+
+```
+EN  Shutdown cancelled - she stays running
+RU  Остановка отменена - дизель продолжает работать
 ```
 
 > The engineer's notebook -- ONE KEY IS ONE WHOLE PAGE. The vanilla journal draws 14 usable lines of 50 columns and silently swallows the rest. Line breaks are written \\n.
@@ -742,10 +819,12 @@ EN  [R] - reverser: N -> FORWARD -> REVERSE -> N.
     Power only with the diesel running.
     Hold [Space] - air brake.
     Order: throttle to 0, then brake.
+    Hold right mouse - look down the line.
     ON A CONTROLLER
-    D-pad up / down - throttle. Left - reverser.
-    Right stick click - brake. It stays set;
-    click again to release it.
+    Right trigger - notch up, left - down.
+    Hold to go on notching. D-pad up/down too.
+    Hold B - brake. D-pad left - reverser.
+    Right stick - look; with RB - look further.
     D-pad right, held - the cab menu.
 RU  [R] -- реверсор: N -> ВПЕРЁД -> НАЗАД -> N.
     Переводить только на стоянке.
@@ -754,11 +833,12 @@ RU  [R] -- реверсор: N -> ВПЕРЁД -> НАЗАД -> N.
     Тяга только при работающем дизеле.
     [Space] держать -- воздушный тормоз.
     Порядок: тяга на 0, потом тормоз.
+    ПКМ держать -- смотреть вдаль по курсору.
     НА ГЕЙМПАДЕ
-    Крестовина вверх / вниз -- тяга.
-    Крестовина влево -- реверсор.
-    Нажать правый стик -- тормоз. Он фиксируется;
-    нажать ещё раз -- отпустить.
+    Правый курок -- позиция выше, левый -- ниже.
+    Держать -- дальше по одной. Крестовина тоже.
+    Держать B -- тормоз. Крестовина влево -- реверс.
+    Правый стик -- смотреть; с RB -- вдаль.
     Крестовина вправо, держать -- меню кабины.
 ```
 
@@ -777,7 +857,7 @@ EN  Six dials: speed, amperes, brake air,
     GEN - the diesel is running.
     BATT: amber - few starts left in her,
     red - the starter will not turn.
-    COND: amber - power is dropping,
+    ENG (the engine): amber - power is dropping,
     red - she can stall on her own.
 RU  Шесть приборов: скорость, амперметр, воздух
     в тормозе, обороты, топливо, вода.
@@ -791,7 +871,7 @@ RU  Шесть приборов: скорость, амперметр, возд�
     GEN - дизель работает.
     BATT: жёлтая - пусков осталось мало,
     красная - стартер не провернётся.
-    COND: жёлтая - мощность падает,
+    ДВИГ (двигатель): жёлтая - мощность падает,
     красная - может заглохнуть сама.
 ```
 
@@ -810,7 +890,7 @@ EN  Hold [Q] - horn.
     burn whenever she has any charge at all.
     Headlight and dome drain the battery; the
     boards do not. Left on, they will flatten her.
-    PAD: left bumper - horn. Right - bell.
+    PAD: LB held - horn. Right-stick click - bell.
     The headlight is on the cab menu.
 RU  Удерживать [Q] - тифон.
     [L] - колокол, включается и звонит сам.
@@ -824,7 +904,7 @@ RU  Удерживать [Q] - тифон.
     горят, пока в батарее есть хоть какой заряд.
     Прожектор и плафон сажают батарею, номерные
     фонари - нет. Оставишь свет - не заведётся.
-    ГЕЙМПАД: левый бампер - тифон. Правый - колокол.
+    ГЕЙМПАД: LB - тифон. Нажать правый стик - колокол.
     Прожектор - в меню кабины.
 ```
 
@@ -840,7 +920,7 @@ EN  She burns fuel at idle too - shut her down.
     -> 'Refuel locomotive from the tank'
        (she must be standing at it);
     -> 'Fill container from the tank'.
-    Each tank has its own finite reserve.
+    Own finite reserve each; pump needs power.
     Siphoning diesel back out needs a hose.
     The battery drains on starts and lights.
     Flat - a running generator nearby, then
@@ -854,7 +934,7 @@ RU  Топливо тратится и на холостых -- глуши.
     -> «Заправить локомотив из цистерны»
        (локомотив должен стоять у неё);
     -> «Наполнить ёмкость из цистерны».
-    У каждой цистерны свой запас, и он конечен.
+    Запас у каждой свой; насосу нужно питание.
     Слить дизель обратно -- нужен шланг.
     Батарея садится от пусков и от света.
     Села -- нужен генератор рядом, и тогда
@@ -875,8 +955,8 @@ EN  SWITCHES
     On a server she destroys it instead, and
     below about 4 m/s she stops at it.
     Freight car, locomotive - hard stop.
-    Every hit takes condition (COND).
-    Condition 0 - OUT OF ORDER, engine dies.
+    Every hit wears her frame, then her engine.
+    Frame 0 - no moving. Engine 0 - it dies.
 RU  СТРЕЛКИ
     Правой кнопкой по стрелке -> «Стрелка»:
     на главный путь (прямо) или на боковой.
@@ -888,59 +968,158 @@ RU  СТРЕЛКИ
     На сервере -- уничтожает, а медленнее
     примерно 4 м/с -- просто встаёт перед ней.
     Вагон, локомотив -- жёсткий стоп.
-    Каждый удар снимает состояние (СОСТ).
-    Состояние 0 -- НЕИСПРАВЕН, дизель глохнет.
+    Удар бьёт по раме, потом по двигателю.
+    Рама 0 -- не едет. Двигатель 0 -- глохнет.
+```
+
+### `IGUI_RR_Note_Cars`
+
+```
+EN  CARS
+    Uncouple: right-click at the joint between
+    two cars -> 'Uncouple'. From the ground, at a
+    stand. Three minutes, no book needed. The cut
+    stays on the rails and holds a switch near it.
+    Couple: back onto standing cars at a walk.
+    Faster than ~2 m/s wears both ends; about
+    8 m/s or more is a crash.
+    A TRAIN NEEDS A BOOK
+    Coupling and pulling cars is taught in
+    'Air Brake and Train Handling Rules'.
+    Without it the throttle stays at 0 while cars
+    are on - cut them off and run light. Look in
+    railroad offices, bookshops and libraries.
+RU  ВАГОНЫ
+    Расцепка: правой кнопкой у стыка двух
+    вагонов -> «Расцепить». С земли, на стоянке.
+    Три минуты, книга не нужна. Отцеп стоит на
+    пути, и стрелку рядом с ним не перевести.
+    Сцепка: подать на стоящие вагоны шагом.
+    Быстрее ~2 м/с -- износ обоих концов;
+    около 8 м/с и больше -- крушение.
+    ПОЕЗДУ НУЖНА КНИГА
+    Сцеплять и водить вагоны учит книга
+    «Автотормоза и вождение поездов».
+    Без неё с вагонами контроллер стоит на 0 --
+    отцепите их и езжайте одним локомотивом.
+    Искать в ЖД конторах, книжных, библиотеках.
 ```
 
 ### `IGUI_RR_Note_Repair`
 
 ```
-EN  REPAIR
-    Right-click her -> 'Repair locomotive
-    with a wrench'. Five minutes of work,
-    +5%% of condition, one point off the wrench.
-    Twenty passes bring her back from zero;
-    a wrench is good for nine of them.
-    No skill, no depot, no parts needed.
-    Duct tape works too: +0.5%% a strip, four
-    strips to a roll, and it refuses above 10%%.
-    Enough to get a dead engine turning over
-    and limp to the depot. At 10%% she pulls
-    badly and stalls.
-RU  РЕМОНТ
-    Правой кнопкой по локомотиву ->
-    «Отремонтировать локомотив ключом».
-    Пять минут работы, +5%% состояния,
-    один пункт с прочности ключа.
-    От нуля до целого -- двадцать подходов;
-    ключа хватает на девять.
-    Ни навыка, ни депо, ни запчастей не надо.
-    Изолента тоже годится: +0,5%% за раз,
-    четыре раза на моток, выше 10%% -- отказ.
-    Хватит, чтобы мёртвый дизель завёлся
-    и доползти до депо. На 10%% еле тянет
-    и глохнет.
+EN  REPAIR - she has an ENGINE and a FRAME.
+    Right-click her -> 'Inspect' shows both.
+    Hits wreck the frame; below half it lets
+    them through to the engine. Frame 0: she
+    cannot move. Engine 0: dead. Car: frame only.
+    ENGINE: wrench + engine parts (strip them
+    from car engines). By Mechanics.
+    FRAME: blowtorch, welding mask or goggles,
+    sheet metal. By Welding, and Mechanics 1.
+    Your skill sets how far you can bring her:
+    Mechanics 2 - the engine to half.
+    A pass can fail; the parts go anyway.
+    Duct tape: the engine only, up to 10%%.
+RU  РЕМОНТ -- у неё ДВИГАТЕЛЬ и РАМА.
+    Правой кнопкой -> «Осмотреть» покажет оба.
+    Удары бьют по раме; ниже половины рама
+    пропускает их в двигатель. Рама 0: не едет.
+    Двигатель 0: мёртв. У вагона -- только рама.
+    ДВИГАТЕЛЬ: ключ + запчасти двигателя
+    (снимают с моторов машин). Навык: Механика.
+    РАМА: горелка, сварочная маска или очки,
+    листовой металл. Сварка и Механика 1.
+    Навык решает, насколько её поднимешь:
+    Механика 2 -- двигатель до половины.
+    Проход может сорваться -- детали уходят.
+    Изолента: только двигатель, до 10%%.
 ```
 
 ### `IGUI_RR_Note_Derail`
 
 ```
-EN  DERAILING is permanent.
+EN  DERAILING
     1. Broken track (open rail end) at speed.
     2. A very hard impact (about 8 m/s or more).
-    Derailed: engine dead, controls dead.
-    Solo: she cannot be put back.
-    On a server: right-click her and put her
-    back on the rails. Temporary - until the
-    proper re-railing gear exists.
-RU  СХОД С РЕЛЬСОВ -- необратим.
+    Derailed: engine dead, controls dead, and
+    she will not move until she is put back.
+    She can be. It is a long job and not one
+    click - see the next page.
+RU  СХОД С РЕЛЬСОВ
     1. Обрыв пути (открытый конец) на скорости.
     2. Очень сильный жёсткий удар (от ~8 м/с).
-    Сошла -- дизель глохнет, управление мертво.
-    Одиночная игра: обратно не ставится.
-    На сервере: правый клик по ней -- поставить
-    обратно на рельсы. Временно, пока нет
-    настоящего инструмента для накатки.
+    Сошла -- дизель глохнет, управление мертво,
+    и с места она не сдвинется, пока её не
+    поставят обратно.
+    Поставить можно. Это долгая работа, а не
+    одно нажатие -- см. следующую страницу.
+```
+
+### `IGUI_RR_Note_Rerail`
+
+```
+EN  BACK ON THE RAILS
+    Right-click her -> 'Rerailing'. Five phases,
+    about four hours of work.
+    Chock the good truck, dig out the ballast,
+    jack the derailed one up on packed timber,
+    walk it over to the rails, spike two frogs
+    down over the railhead. Last phase is the
+    PULL: from the seat, with the diesel running.
+    The pull needs a licence, and it can fail at
+    the top and cost an hour back.
+    KIT: two frogs, track jack, rail chock,
+    spike maul, claw bar, six spikes, chain,
+    shovel, four planks. The rail gear is kept
+    in railroad buildings. Anything in reach does.
+RU  ОБРАТНО НА РЕЛЬСЫ
+    Правый клик по ней -> «Накатка». Пять этапов,
+    около четырёх часов.
+    Подбить целую тележку, выбрать балласт,
+    вывесить сошедшую домкратом на клетях,
+    подтащить к пути, пришить костылями два
+    накатных башмака к рельсу. Последний этап -
+    вытяжка: из кабины, с работающим дизелем,
+    и на неё нужны права. Может сорваться.
+    НУЖНО: 2 накатных башмака, домкрат,
+    тормозной башмак, костыльный молот, лом,
+    6 костылей, цепь, лопата, 4 доски.
+    Путейское держат в ЖД постройках.
+    Годится всё, до чего дотянуться, и с земли.
+```
+
+### `IGUI_RR_Note_CarRerail`
+
+```
+EN  CARS OFF THE RAILS
+    A derailed car holds the train. Two ways out:
+    - uncouple it (any joint, no book) and
+      leave it lying where it came off;
+    - or put it back: right-click the car ->
+      'Rerailing'. Same kit as for her, lighter
+      work: 18 passes, about three hours.
+    Phases 1-4 at the car, from the ground.
+    Phase 5 is the PULL, by a locomotive: ease
+    her onto the car at a walk to couple (faster,
+    she only bumps it), then pull from her cab
+    with the diesel running. Needs her licence
+    and the train-handling book.
+    A shove mid-job undoes the work.
+RU  ВАГОН СОШЁЛ С РЕЛЬСОВ
+    Сошедший вагон держит весь поезд. Выхода два:
+    - отцепить его (любой стык, без книги) и
+      оставить лежать, где сошёл;
+    - или поставить: ПКМ по вагону ->
+      «Накатка». Набор тот же, что для локомотива,
+      но работы меньше: 18 проходов, около 3 ч.
+    Этапы 1-4 у вагона, с земли.
+    Этап 5 - ВЫТЯЖКА локомотивом: подайте его к
+    вагону шагом, чтобы сцепиться (быстрее -
+    только толкнёт), и тяните из кабины
+    с заведённым дизелем. Нужны права на него
+    и книга о вождении поездов.
+    Толчок посреди работы сбивает сделанное.
 ```
 
 > The page that thanks the people who paid for this. Translate the heading and the thank-you line; COPY THE NAMES character for character -- a handle is spelled the way its owner spells it. The suite fails if one is transliterated.
@@ -1000,8 +1179,8 @@ RU  Теперь вы умеете водить %1
 ### `IGUI_RR_LearnedConsist`
 
 ```
-EN  You have learned train handling and the automatic brake
-RU  Вы изучили вождение поездов и автотормоз
+EN  You have learned train handling: you can couple cars and pull a train
+RU  Вы изучили вождение поездов: можно сцеплять вагоны и водить состав
 ```
 
 ### `IGUI_RR_RideAlong`
@@ -1151,6 +1330,13 @@ EN  Climb out of the cab to work on her
 RU  Выйдите из кабины, чтобы обслуживать локомотив
 ```
 
+### `IGUI_RR_Reject_InCar`
+
+```
+EN  Climb out of the car to work on it
+RU  Выйдите из вагона, чтобы обслуживать его
+```
+
 ### `IGUI_RR_Reject_SwitchNotFound`
 
 ```
@@ -1284,6 +1470,1053 @@ EN  Tape will not take her any further
 RU  Дальше изолентой не починить
 ```
 
+### `IGUI_RR_RepairCarOption`
+
+```
+EN  Repair car with a wrench
+RU  Отремонтировать вагон ключом
+```
+
+### `IGUI_RR_CarRepaired`
+
+```
+EN  Car repaired (+5%%)
+RU  Вагон отремонтирован (+5%%)
+```
+
+### `IGUI_RR_CarServiced`
+
+```
+EN  The car is sound - nothing to repair
+RU  Вагон исправен - чинить нечего
+```
+
+### `IGUI_RR_Reject_TapeCar`
+
+```
+EN  Tape will not hold a car together - use a wrench
+RU  Изолентой вагон не починить - нужен гаечный ключ
+```
+
+### `IGUI_RR_InspectCarOption`
+
+```
+EN  Inspect the car
+RU  Осмотреть вагон
+```
+
+### `IGUI_RR_InspectLocoOption`
+
+```
+EN  Inspect the locomotive
+RU  Осмотреть локомотив
+```
+
+### `IGUI_RR_InspectLoco`
+
+```
+EN  Locomotive - engine %1%%, frame %2%%
+RU  Локомотив - двигатель %1%%, рама %2%%
+```
+
+### `IGUI_RR_InspectEngine`
+
+```
+EN  Engine: %1%%
+RU  Двигатель: %1%%
+```
+
+### `IGUI_RR_InspectFrame`
+
+```
+EN  Frame: %1%%
+RU  Рама: %1%%
+```
+
+### `IGUI_RR_RepairEngineOption`
+
+```
+EN  Repair the engine
+RU  Отремонтировать двигатель
+```
+
+### `IGUI_RR_WeldFrameOption`
+
+```
+EN  Weld the frame
+RU  Заварить раму
+```
+
+### `IGUI_RR_EngineRepaired`
+
+```
+EN  Engine repaired
+RU  Двигатель отремонтирован
+```
+
+### `IGUI_RR_FrameWelded`
+
+```
+EN  Frame welded
+RU  Рама заварена
+```
+
+### `IGUI_RR_EngineSound`
+
+```
+EN  The engine is sound
+RU  Двигатель исправен
+```
+
+### `IGUI_RR_FrameSound`
+
+```
+EN  The frame is sound
+RU  Рама исправна
+```
+
+### `IGUI_RR_RepairFailed`
+
+```
+EN  The repair did not take - the material is spent
+RU  Ремонт не удался - материал потрачен
+```
+
+### `IGUI_RR_RepairNotPossible`
+
+```
+EN  Cannot repair - see the requirements
+RU  Ремонт невозможен - см. требования
+```
+
+### `IGUI_RR_InspectCar`
+
+```
+EN  Car %1: %2%%
+RU  Вагон %1: %2%%
+```
+
+### `IGUI_RR_InspectCarNum`
+
+```
+EN  Car %1 (%2): %3%%
+RU  Вагон %1 (%2): %3%%
+```
+
+### `IGUI_RR_InspectDead`
+
+```
+EN  broken down
+RU  неисправен
+```
+
+### `IGUI_RR_InspectDerailed`
+
+```
+EN  off the rails
+RU  сошёл с рельсов
+```
+
+### `IGUI_RR_Rerail_Menu`
+
+```
+EN  Rerailing: %1
+RU  Постановка на рельсы: %1
+```
+
+### `IGUI_RR_Rerail_Phase`
+
+```
+EN  phase %1 of %2 - %3
+RU  фаза %1 из %2 - %3
+```
+
+### `IGUI_RR_Rerail_Stage_Prep`
+
+```
+EN  Chocking and clearing ballast
+RU  Закрепление и выборка балласта
+```
+
+### `IGUI_RR_Rerail_Stage_Lift`
+
+```
+EN  Jacking the truck
+RU  Вывешивание тележки
+```
+
+### `IGUI_RR_Rerail_Stage_Skid`
+
+```
+EN  Skidding the truck to the track
+RU  Сдвижка тележки к пути
+```
+
+### `IGUI_RR_Rerail_Stage_Frogs`
+
+```
+EN  Setting and spiking the frogs
+RU  Установка и пришивка башмаков
+```
+
+### `IGUI_RR_Rerail_Stage_Pull`
+
+```
+EN  The pull
+RU  Накат
+```
+
+### `IGUI_RR_Rerail_NeedFrog`
+
+```
+EN  You need two rerailing frogs
+RU  Нужны два накатных башмака
+```
+
+### `IGUI_RR_Rerail_NeedJack`
+
+```
+EN  You need a track jack
+RU  Нужен путевой домкрат
+```
+
+### `IGUI_RR_Rerail_NeedSkate`
+
+```
+EN  You need a rail chock to hold her first
+RU  Нужен тормозной башмак — сначала её надо закрепить
+```
+
+### `IGUI_RR_Rerail_NeedCribbing`
+
+```
+EN  You need four planks for blocking
+RU  Нужны четыре доски под клеть
+```
+
+### `IGUI_RR_Rerail_NeedBar`
+
+```
+EN  You need a spike puller
+RU  Нужен костыльный лом
+```
+
+### `IGUI_RR_Rerail_NeedMaul`
+
+```
+EN  You need a spike maul or a sledgehammer
+RU  Нужен костыльный молот или кувалда
+```
+
+### `IGUI_RR_Rerail_NeedSpikes`
+
+```
+EN  You need six railroad spikes
+RU  Нужны шесть путевых костылей
+```
+
+### `IGUI_RR_Rerail_NeedChain`
+
+```
+EN  You need a chain
+RU  Нужна цепь
+```
+
+### `IGUI_RR_Rerail_NeedShovel`
+
+```
+EN  You need a shovel
+RU  Нужна лопата
+```
+
+### `IGUI_RR_Rerail_Reject_NotDerailed`
+
+```
+EN  She is on the rails already
+RU  Она и так на рельсах
+```
+
+### `IGUI_RR_Rerail_Reject_Busy`
+
+```
+EN  Someone else is working on her
+RU  С ней уже кто-то работает
+```
+
+### `IGUI_RR_Rerail_Reject_TooFar`
+
+```
+EN  Get closer to the locomotive
+RU  Подойдите ближе к локомотиву
+```
+
+### `IGUI_RR_Rerail_Reject_TooFarCar`
+
+```
+EN  Get closer to the car
+RU  Подойдите ближе к вагону
+```
+
+### `IGUI_RR_Rerail_CarMenu`
+
+```
+EN  Car %1: %2
+RU  Вагон %1: %2
+```
+
+### `IGUI_RR_Rerail_Reject_NoLicence`
+
+```
+EN  The pull means driving her, and you don't know how
+RU  Накат - это управление локомотивом, а вы не умеете
+```
+
+### `IGUI_RR_Rerail_Reject_NeedCab`
+
+```
+EN  The pull is made from the cab - climb in
+RU  Накат делается из кабины - садитесь за пульт
+```
+
+### `IGUI_RR_Rerail_Reject_NeedLoco`
+
+```
+EN  A car is pulled back on by a locomotive - couple one to it at a walk
+RU  Вагон вытягивает локомотив - подайте его к вагону шагом и сцепите
+```
+
+### `IGUI_RR_Rerail_Reject_LocoDerailed`
+
+```
+EN  The locomotive coupled to it is off the rails herself
+RU  Сцепленный с ним локомотив сам сошёл с рельсов
+```
+
+### `IGUI_RR_Rerail_Reject_NoConsist`
+
+```
+EN  Pulling a car back on is train handling - it is in Air Brake and Train Handling Rules
+RU  Вытянуть вагон - это работа с составом, она в книге «Автотормоза и вождение поездов»
+```
+
+### `IGUI_RR_Rerail_KnockedBack`
+
+```
+EN  The shove knocked the car off - re-railing is back to phase %1
+RU  От толчка вагон сорвало - накатка откатилась к этапу %1
+```
+
+### `IGUI_RR_Rerail_Reject_PhaseMoved`
+
+```
+EN  That phase is finished - the work has moved on
+RU  Этот этап уже закончен - работа ушла дальше
+```
+
+### `IGUI_RR_Rerail_Reject_TooSoon`
+
+```
+EN  That is not a pass yet - keep working
+RU  Проход ещё не сделан - продолжайте работу
+```
+
+### `IGUI_RR_Rerail_Reject_NeedEngine`
+
+```
+EN  Start the diesel first - she has to pull herself up
+RU  Сначала заведите дизель - она должна вкатиться сама
+```
+
+### `IGUI_RR_Rerail_PhaseMoved`
+
+```
+EN  Someone else finished that phase
+RU  Этот этап закончил кто-то другой
+```
+
+### `IGUI_RR_Rerail_StageDone`
+
+```
+EN  Phase %1 of %2 done
+RU  Этап %1 из %2 завершён
+```
+
+### `IGUI_RR_Rerail_Fail_Setup`
+
+```
+EN  The frog kicked out.
+RU  Башмак выбило.
+```
+
+### `IGUI_RR_Rerail_Fail_Pull`
+
+```
+EN  She slipped off the frog.
+RU  Она сорвалась с башмака.
+```
+
+### `IGUI_RR_Rerail_Time_HM`
+
+```
+EN  %1 h %2 min
+RU  %1 ч %2 мин
+```
+
+### `IGUI_RR_Rerail_Time_M`
+
+```
+EN  %1 min
+RU  %1 мин
+```
+
+### `IGUI_RR_Rerail_Tip_Header`
+
+```
+EN  Putting her back on the rails
+RU  Постановка на рельсы
+```
+
+### `IGUI_RR_Rerail_Tip_HeaderCar`
+
+```
+EN  Putting the car back on the rails
+RU  Постановка вагона на рельсы
+```
+
+### `IGUI_RR_Rerail_Tip_CarPull`
+
+```
+EN  The last phase is a locomotive's pull.
+RU  Последний этап - вытяжка локомотивом.
+```
+
+### `IGUI_RR_Rerail_Tip_CarPull2`
+
+```
+EN  Couple one to the car at a walk, then pull from her cab.
+RU  Подайте его к вагону шагом, сцепите и тяните из кабины.
+```
+
+### `IGUI_RR_Rerail_Tip_CarLocoYes`
+
+```
+EN  A locomotive is coupled to this car.
+RU  К вагону прицеплен локомотив.
+```
+
+### `IGUI_RR_Rerail_Tip_CarLocoNo`
+
+```
+EN  No locomotive is coupled to this car yet.
+RU  К вагону ещё не прицеплен локомотив.
+```
+
+### `IGUI_RR_Rerail_StageDoneCarPull`
+
+```
+EN  Phase %1 of %2 done. Next: couple a locomotive to the car at a walk and pull from her cab
+RU  Этап %1 из %2 завершён. Дальше: подайте локомотив к вагону шагом, сцепите и тяните из кабины
+```
+
+### `IGUI_RR_Rerail_Tip_Last`
+
+```
+EN  last
+RU  последняя
+```
+
+### `IGUI_RR_Rerail_Tip_Kit`
+
+```
+EN  The kit, and what is within reach:
+RU  Комплект и что под рукой:
+```
+
+### `IGUI_RR_Rerail_Tip_Eta`
+
+```
+EN  About %1 to go, if it goes first time.
+RU  До конца ≈ %1, если получится с первого раза.
+```
+
+### `IGUI_RR_Rerail_Tip_Chance`
+
+```
+EN  Chance of this attempt: %1%%
+RU  Шанс этой попытки: %1%%
+```
+
+### `IGUI_RR_Rerail_Tip_Fails`
+
+```
+EN  Attempts failed so far: %1
+RU  Неудачных попыток: %1
+```
+
+### `IGUI_RR_Rerail_Tip_Fresh`
+
+```
+EN  Nothing done yet. The whole job is about %1.
+RU  Ещё ничего не сделано. Вся работа — около %1.
+```
+
+> Uncoupling cars by hand, standing on the ground at the joint between two units: the menu entry, its tooltip, the halo when it is done, and the red halo for each reason it is refused. 'Coupling' is the knuckle coupler between two cars. %1 is a number of cars.
+
+
+### `IGUI_RR_UncoupleOption`
+
+```
+EN  Uncouple
+RU  Расцепить
+```
+
+### `IGUI_RR_Uncouple_Tip`
+
+```
+EN  Uncouple here: %1 car(s) will be left standing
+RU  Расцепить здесь: останется стоять вагонов: %1
+```
+
+### `IGUI_RR_Uncoupled`
+
+```
+EN  Uncoupled - %1 car(s) left standing
+RU  Расцеплено - оставлено вагонов: %1
+```
+
+### `IGUI_RR_Uncouple_InCab`
+
+```
+EN  Climb out of the cab to uncouple
+RU  Выйдите из кабины, чтобы расцепить
+```
+
+### `IGUI_RR_Uncouple_Rolling`
+
+```
+EN  The train is moving - stop it to uncouple
+RU  Поезд движется - остановите его, чтобы расцепить
+```
+
+### `IGUI_RR_Uncouple_TooFar`
+
+```
+EN  Stand at the coupling to uncouple
+RU  Подойдите к сцепке, чтобы расцепить
+```
+
+### `IGUI_RR_Uncouple_Gone`
+
+```
+EN  That coupling is no longer there
+RU  Этой сцепки больше нет
+```
+
+### `IGUI_RR_Uncouple_Failed`
+
+```
+EN  Could not uncouple
+RU  Расцепить не удалось
+```
+
+> Coupling on contact: the train backs onto cars left standing and the automatic coupler closes by itself. One halo when it couples (%1 is the number of cars taken on); the red ones say why the train stopped at the cars instead -- the driver has not read the Train Handling book (name it as the item is named in ItemName), the cars are off the rails, or (on a server only) the coupled train would be longer than the server allows -- %1 there is that limit in tiles.
+
+
+### `IGUI_RR_Coupled`
+
+```
+EN  Coupled - %1 car(s)
+RU  Сцеплено - вагонов: %1
+```
+
+### `IGUI_RR_CoupleNoLicence`
+
+```
+EN  The train stands at the coupler - coupling cars is in Air Brake and Train Handling Rules
+RU  Поезд встал у сцепки - как сцеплять вагоны, написано в книге «Автотормоза и вождение поездов»
+```
+
+> Cars are coupled and the driver has not read the Train Handling book, so the throttle takes no power. The first key is the red halo: name the book as the item is named in ItemName, and keep the second half -- the cars can be uncoupled, and then the locomotive runs alone ('light'). The Hud key is the same fact on the control stand's alarm strip: keep it short.
+
+
+### `IGUI_RR_NoConsist`
+
+```
+EN  Cars coupled - pulling a train is in Air Brake and Train Handling Rules. Uncouple the cars to run light
+RU  Прицеплены вагоны - как водить поезд, написано в книге «Автотормоза и вождение поездов». Отцепите вагоны, чтобы ехать одним локомотивом
+```
+
+### `IGUI_RR_NoConsistHud`
+
+```
+EN  Cars on - you don't know train handling
+RU  Прицеплены вагоны - вы не умеете водить поезда
+```
+
+> Coupling on contact: the train backs onto cars left standing and the automatic coupler closes by itself. One halo when it couples (%1 is the number of cars taken on); the red ones say why the train stopped at the cars instead -- the driver has not read the Train Handling book (name it as the item is named in ItemName), the cars are off the rails, or (on a server only) the coupled train would be longer than the server allows -- %1 there is that limit in tiles.
+
+
+### `IGUI_RR_CoupleDerailed`
+
+```
+EN  Those cars are off the rails - couple onto them only at a walk
+RU  Эти вагоны сошли с рельсов - сцепиться с ними можно только шагом
+```
+
+### `IGUI_RR_CoupleReach`
+
+```
+EN  The train would be longer than %1 tiles - it stands at the coupler
+RU  Поезд стал бы длиннее %1 тайлов - он стоит у сцепки
+```
+
+> A railroad switch (turnout) and the two roads it can be set for. See GLOSSARY.md before translating 'switch'.
+
+
+### `IGUI_RR_SwitchOccupied`
+
+```
+EN  A train is standing on the switch - it cannot be thrown
+RU  На стрелке стоит состав - перевести её нельзя
+```
+
+### `IGUI_RR_CarClimbIn`
+
+```
+EN  Climbing into the car
+RU  Забираюсь в вагон
+```
+
+### `IGUI_RR_CarClimbOut`
+
+```
+EN  Climbing down from the car
+RU  Слезаю с вагона
+```
+
+### `IGUI_RR_CarGoToDoor`
+
+```
+EN  Go to the doorway to climb down
+RU  Подойдите к проёму, чтобы слезть
+```
+
+### `IGUI_RR_CarMovingIn`
+
+```
+EN  The car is moving
+RU  Вагон движется
+```
+
+### `IGUI_RR_CarClimbInOption`
+
+```
+EN  Climb into the car
+RU  Залезть в вагон
+```
+
+### `IGUI_RR_CarClimbOutOption`
+
+```
+EN  Climb down from the car
+RU  Слезть с вагона
+```
+
+### `IGUI_RR_CarClimbTip`
+
+```
+EN  Or hold E at the doorway
+RU  Или удерживайте E у проёма
+```
+
+### `IGUI_RR_CarJumpOption`
+
+```
+EN  Jump off the moving car
+RU  Спрыгнуть с движущегося вагона
+```
+
+### `IGUI_RR_CarJumpTip`
+
+```
+EN  The faster she goes, the worse the landing. Or hold E at the doorway
+RU  Чем быстрее идёт поезд, тем тяжелее приземление. Или удерживайте E у проёма
+```
+
+> A boxcar's sliding door: the right-click entries at the door and the red halo over the player when the door cannot be moved. Short: a halo is one line.
+
+
+### `IGUI_RR_CarDoorOpen`
+
+```
+EN  Open the car door
+RU  Открыть дверь вагона
+```
+
+### `IGUI_RR_CarDoorClose`
+
+```
+EN  Close the car door
+RU  Закрыть дверь вагона
+```
+
+### `IGUI_RR_CarDoorShut`
+
+```
+EN  The door is shut - open it first (tap E)
+RU  Дверь закрыта - сначала откройте её (нажмите E)
+```
+
+### `IGUI_RR_CarDoorTip`
+
+```
+EN  Or tap E at the door
+RU  Или нажмите E у двери
+```
+
+### `IGUI_RR_CarDoorFar`
+
+```
+EN  Get closer to the car door
+RU  Подойдите к двери вагона
+```
+
+### `IGUI_RR_CarDoorGone`
+
+```
+EN  There is no door - the zombies broke it
+RU  Двери нет — её выломали зомби
+```
+
+### `IGUI_RR_DoorPresent`
+
+```
+EN  The door is in place
+RU  Дверь на месте
+```
+
+### `IGUI_RR_DoorNeedSkill`
+
+```
+EN  Not enough Welding
+RU  Не хватает навыка газосварки
+```
+
+### `IGUI_RR_DoorNeedItems`
+
+```
+EN  Missing materials
+RU  Не хватает материалов
+```
+
+### `IGUI_RR_DoorInstall`
+
+```
+EN  Install a door
+RU  Установить дверь
+```
+
+### `IGUI_RR_DoorInstallEnd`
+
+```
+EN  Install a door: %1
+RU  Установить дверь: %1
+```
+
+### `IGUI_RR_DoorInstalled`
+
+```
+EN  The door is hung
+RU  Дверь установлена
+```
+
+### `IGUI_RR_DoorName_front`
+
+```
+EN  Front
+RU  Передняя
+```
+
+### `IGUI_RR_DoorName_rear`
+
+```
+EN  Rear
+RU  Задняя
+```
+
+### `IGUI_RR_InspectDoor`
+
+```
+EN  %1 door: %2/%3
+RU  %1 дверь: %2/%3
+```
+
+### `IGUI_RR_InspectDoorGone`
+
+```
+EN  %1 door: none (broken)
+RU  %1 дверь: нет (выломана)
+```
+
+### `IGUI_RR_HoldSection`
+
+```
+EN  Hold %1
+RU  Трюм %1
+```
+
+### `IGUI_RR_HoldNoGround`
+
+```
+EN  You can't reach the ground from inside the car
+RU  Из вагона до земли не дотянуться
+```
+
+### `IGUI_RR_DeckSwept`
+
+```
+EN  Things on the car floor slid into the hold
+RU  Вещи с пола вагона съехали в трюм
+```
+
+### `IGUI_RR_DeckSpilled`
+
+```
+EN  Some of it fell out of the open door
+RU  Часть выпала в открытую дверь
+```
+
+### `IGUI_RR_DeckNoPlace`
+
+```
+EN  That can't go on the car floor
+RU  Это нельзя положить на пол вагона
+```
+
+### `IGUI_RR_DeckNoRest`
+
+```
+EN  In a car you can only sleep on a sleeping bag
+RU  На спальнике в вагоне можно только спать
+```
+
+### `IGUI_RR_HoldFull`
+
+```
+EN  No room in the hold
+RU  В трюме нет места
+```
+
+### `IGUI_RR_DeckBagFar`
+
+```
+EN  Climb into the car first
+RU  Сначала заберитесь в вагон
+```
+
+### `IGUI_RR_CbPanel`
+
+```
+EN  Electrical panel
+RU  Электрощиток
+```
+
+### `IGUI_RR_CbLampsOn`
+
+```
+EN  Turn the cabin lights on
+RU  Включить свет в салоне
+```
+
+### `IGUI_RR_CbLampsOff`
+
+```
+EN  Turn the cabin lights off
+RU  Выключить свет в салоне
+```
+
+### `IGUI_RR_CbFridgeOn`
+
+```
+EN  Turn the fridge on
+RU  Включить холодильник
+```
+
+### `IGUI_RR_CbFridgeOff`
+
+```
+EN  Turn the fridge off
+RU  Выключить холодильник
+```
+
+### `IGUI_RR_CbLampsAreOn`
+
+```
+EN  Lights on
+RU  Свет включён
+```
+
+### `IGUI_RR_CbLampsAreOff`
+
+```
+EN  Lights off
+RU  Свет выключен
+```
+
+### `IGUI_RR_CbFridgeIsOn`
+
+```
+EN  Fridge on
+RU  Холодильник включён
+```
+
+### `IGUI_RR_CbFridgeIsOff`
+
+```
+EN  Fridge off
+RU  Холодильник выключен
+```
+
+### `IGUI_RR_CbNoPower`
+
+```
+EN  No power - the battery is flat
+RU  Нет питания - аккумулятор разряжен
+```
+
+### `IGUI_RR_CbPowerAxle`
+
+```
+EN  Power: axle generator, battery %1%%
+RU  Питание: от оси, аккумулятор %1%%
+```
+
+### `IGUI_RR_CbPowerGround`
+
+```
+EN  Power: generator, battery %1%%
+RU  Питание: от генератора, аккумулятор %1%%
+```
+
+### `IGUI_RR_CbPowerBattery`
+
+```
+EN  Power: battery %1%%, ~%2 h at this load
+RU  Питание: аккумулятор %1%%, ~%2 ч при этой нагрузке
+```
+
+### `IGUI_RR_CbPowerBatteryIdle`
+
+```
+EN  Power: battery %1%%, nothing switched on
+RU  Питание: аккумулятор %1%%, ничего не включено
+```
+
+### `IGUI_RR_CbPowerNone`
+
+```
+EN  Power: none - the battery is flat
+RU  Питание: нет - аккумулятор разряжен
+```
+
+### `IGUI_RR_CbSrcAxle`
+
+```
+EN  Power: axle generator (charging)
+RU  Питание: осевой генератор (идёт зарядка)
+```
+
+### `IGUI_RR_CbSrcGround`
+
+```
+EN  Power: generator (charging)
+RU  Питание: генератор (идёт зарядка)
+```
+
+### `IGUI_RR_CbSrcBattery`
+
+```
+EN  Power: battery
+RU  Питание: аккумулятор
+```
+
+### `IGUI_RR_CbSrcNone`
+
+```
+EN  Power: none
+RU  Питание: нет
+```
+
+### `IGUI_RR_CbCharge`
+
+```
+EN  Battery charge: %1%%
+RU  Заряд аккумулятора: %1%%
+```
+
+### `IGUI_RR_CbLoadNone`
+
+```
+EN  Load: nothing switched on
+RU  Потребление: ничего не включено
+```
+
+### `IGUI_RR_CbLoadLeft`
+
+```
+EN  Load: %1%% of the battery per hour (~%2 h left)
+RU  Потребление: %1%% заряда в час (хватит на ~%2 ч)
+```
+
+### `IGUI_RR_CbLoadCarried`
+
+```
+EN  Load: %1%% per hour (not taken from the battery)
+RU  Потребление: %1%% в час (не из аккумулятора)
+```
+
+### `IGUI_RR_CbLoad`
+
+```
+EN  Load: %1%% per hour (no power)
+RU  Потребление: %1%% в час (нет питания)
+```
+
+### `IGUI_RR_CbDraw`
+
+```
+EN  (%1%% per hour)
+RU  (%1%% в час)
+```
+
+### `IGUI_RR_CbGenLoad`
+
+```
+EN  Caboose: %1
+RU  Кабуз: %1
+```
+
+### `IGUI_RR_CbGenFridge`
+
+```
+EN  fridge
+RU  холодильник
+```
+
+### `IGUI_RR_CbGenLamps`
+
+```
+EN  lights
+RU  свет
+```
+
+### `IGUI_RR_CbGenCharge`
+
+```
+EN  battery charging
+RU  зарядка аккумулятора
+```
+
 ## ItemName.json
 
 
@@ -1318,6 +2551,34 @@ EN  Air Brake and Train Handling Rules
 RU  Автотормоза и вождение поездов
 ```
 
+### `Base.RR_RailFrog`
+
+```
+EN  Rerailing Frog
+RU  Накатный башмак
+```
+
+### `Base.RR_TrackJack`
+
+```
+EN  Track Jack
+RU  Путевой домкрат
+```
+
+### `Base.RR_RailSkate`
+
+```
+EN  Rail Chock
+RU  Тормозной башмак
+```
+
+### `Base.RR_SpikeMaul`
+
+```
+EN  Spike Maul
+RU  Костыльный молот
+```
+
 ## Tooltip.json
 
 
@@ -1334,8 +2595,8 @@ RU  Заводская инструкция по одной марке локо�
 ### `Tooltip_item_RR_TrainHandlingBook`
 
 ```
-EN  The company book: the automatic brake, slack, grades, signals.<br>The brake handle you already know stops the locomotive and<br>nothing else. A train is stopped down the brake pipe, and<br>getting that wrong is what runs a grade away from you.<br>Long enough to take several sittings.<br>Teaches working a train: couplers, and the brake that<br>reaches the cars.
-RU  Общая книга: автотормоз, оттяжки, уклоны, сигналы.<br>Тот тормоз, которым вы уже пользуетесь, - вспомогательный:<br>он держит локомотив и больше ничего. Состав тормозят<br>тормозной магистралью, и именно на этом уходят под уклон.<br>За один заход не осилить.<br>Учит работать с составом: сцепка и тормоз, который<br>достаёт до вагонов.
+EN  The company book: the automatic brake, slack, grades, signals.<br>The brake handle you already know stops the locomotive and<br>nothing else. A train is stopped down the brake pipe, and<br>getting that wrong is what runs a grade away from you.<br>Long enough to take several sittings.<br>Teaches working a train: coupling cars and pulling them.<br>Without it a locomotive with cars on will not take power.
+RU  Общая книга: автотормоз, оттяжки, уклоны, сигналы.<br>Тот тормоз, которым вы уже пользуетесь, - вспомогательный:<br>он держит локомотив и больше ничего. Состав тормозят<br>тормозной магистралью, и именно на этом уходят под уклон.<br>За один заход не осилить.<br>Учит работать с составом: сцеплять вагоны и водить их.<br>Без неё локомотив с вагонами не наберёт позиций.
 ```
 
 ### `Tooltip_Recipe_RR_Operate_GP7`
@@ -1350,6 +2611,34 @@ RU  Вы можете запускать и водить GP7 резервом.
 ```
 EN  You can couple cars and handle a train on the automatic brake.
 RU  Вы можете сцеплять вагоны и вести состав на автотормозе.
+```
+
+### `Tooltip_item_RR_RailFrog`
+
+```
+EN  A steel ramp clamped over the railhead that a derailed wheel is driven back up into gauge.
+RU  Стальной пандус на головку рельса: по нему сошедшее колесо накатывают обратно на путь.
+```
+
+### `Tooltip_item_RR_TrackJack`
+
+```
+EN  A thirty-ton ratchet jack for lifting a derailed truck and walking it back over the rails.
+RU  Реечный путевой домкрат на тридцать тонн: вывесить сошедшую тележку и переставить её к пути.
+```
+
+### `Tooltip_item_RR_RailSkate`
+
+```
+EN  A steel wedge over the railhead that holds the locomotive where she stands.
+RU  Стальной клин на головку рельса: держит локомотив на месте.
+```
+
+### `Tooltip_item_RR_SpikeMaul`
+
+```
+EN  A long-handled hammer with a narrow double face, for driving track spikes. A sledgehammer will do the job, but this is what it is for.
+RU  Молот на длинной рукояти с узким двусторонним бойком: забивать путевые костыли. Кувалдой тоже можно, но сделан он для этого.
 ```
 
 ## Recipes.json
@@ -1406,6 +2695,34 @@ EN  Qualified on any locomotive without reading its manual.<br>A cold diesel cat
 RU  Допущен к любому локомотиву без чтения инструкций.<br>Холодный дизель схватывает чаще, а сорвавшийся пуск сажает вдвое меньше заряда.
 ```
 
+### `UI_RR_Opt_Title`
+
+```
+EN  Railroader
+RU  Railroader
+```
+
+### `UI_RR_Opt_Desc`
+
+```
+EN  Locomotive volume. These sounds are not affected by the game's own Audio settings. The diesel slider applies on top of the first one.
+RU  Громкость локомотива. Эти звуки не подчиняются игровым настройкам звука. Ползунок дизеля действует поверх первого.
+```
+
+### `UI_RR_Opt_Master`
+
+```
+EN  Locomotive: all sounds
+RU  Локомотив: все звуки
+```
+
+### `UI_RR_Opt_Diesel`
+
+```
+EN  Locomotive: diesel engine
+RU  Локомотив: дизель
+```
+
 ## Fluids.json
 
 
@@ -1417,4 +2734,11 @@ RU  Допущен к любому локомотиву без чтения ин
 ```
 EN  Diesel
 RU  Дизельное топливо
+```
+
+### `Fluid_Container_RRCabooseTank`
+
+```
+EN  Water tank
+RU  Бак для воды
 ```
