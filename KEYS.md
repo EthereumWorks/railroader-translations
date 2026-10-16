@@ -2,7 +2,7 @@
 
 Generated from the mod by `tools/sync_translations.py` -- do not edit by hand.
 
-336 strings in 6 files. The Russian column is not a second source: it is there as a worked example of how far you may go from the English (abbreviations on the control stand, a driver's word where English uses two).
+337 strings in 6 files. The Russian column is not a second source: it is there as a worked example of how far you may go from the English (abbreviations on the control stand, a driver's word where English uses two).
 
 A key with an empty value is deliberate -- an empty string means *use the English*, and it is the honest way to leave one alone.
 
@@ -1120,6 +1120,37 @@ RU  ВАГОН СОШЁЛ С РЕЛЬСОВ
     с заведённым дизелем. Нужны права на него
     и книга о вождении поездов.
     Толчок посреди работы сбивает сделанное.
+```
+
+### `IGUI_RR_Note_Caboose`
+
+```
+EN  CABOOSE (K&L 3, 5, 7, 9)
+    The road kept a few: one by her shed in
+    Muldraugh, others in yards down the line.
+    Board by the end stairs; [E] at the end door.
+    Bunk to sleep, chairs, two cabinets, a fridge,
+    a wood stove, a sink with its own tank.
+    The floor holds cargo - drop things there.
+    PANEL by the sink: lights and fridge.
+    The battery charges while she rolls, or from
+    a running generator beside her. Switched on
+    it drains: lights ~33 h, fridge ~17 h.
+    Dry and warm in the cabin, even rolling.
+    A broken door: weld a new one (Welding 3).
+RU  КАБУЗ (K&L 3, 5, 7, 9)
+    У дороги их было несколько: один у депо
+    в Малдро, другие на станциях по линии.
+    Вход по торцевым ступеням; [E] у двери.
+    Койка, стулья, два шкафа, холодильник,
+    печь на дровах, мойка со своим баком.
+    Пол - для груза, бросайте вещи туда.
+    ЩИТОК у мойки: свет и холодильник.
+    Аккумулятор заряжается на ходу или от
+    работающего генератора рядом. Включённое
+    сажает его: свет ~33 ч, холодильник ~17 ч.
+    В салоне сухо и тепло, даже на ходу.
+    Сломанную дверь - заварить новую (Сварка 3).
 ```
 
 > The page that thanks the people who paid for this. Translate the heading and the thank-you line; COPY THE NAMES character for character -- a handle is spelled the way its owner spells it. The suite fails if one is transliterated.
