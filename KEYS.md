@@ -2,7 +2,7 @@
 
 Generated from the mod by `tools/sync_translations.py` -- do not edit by hand.
 
-337 strings in 6 files. The Russian column is not a second source: it is there as a worked example of how far you may go from the English (abbreviations on the control stand, a driver's word where English uses two).
+339 strings in 6 files. The Russian column is not a second source: it is there as a worked example of how far you may go from the English (abbreviations on the control stand, a driver's word where English uses two).
 
 A key with an empty value is deliberate -- an empty string means *use the English*, and it is the honest way to leave one alone.
 
@@ -134,6 +134,20 @@ RU  НЕ МОЖЕТ ЕХАТЬ - рама разбита, нужна сварк�
 ```
 EN  DERAILED - the locomotive has left the rails
 RU  СОШЁЛ С РЕЛЬСОВ - локомотив вне путей
+```
+
+### `IGUI_RR_NoTrack`
+
+```
+EN  There is no track under her - she cannot move
+RU  Под ней нет пути - она не может двигаться
+```
+
+### `IGUI_RR_TripStop`
+
+```
+EN  Trip stop - emergency brake
+RU  Автостоп - экстренное торможение
 ```
 
 ### `IGUI_RR_CarDerailed`

@@ -17,6 +17,8 @@
     "IGUI_RR_OutOfOrder": "OUT OF ORDER - the engine is dead, needs parts",
     "IGUI_RR_OutOfOrderFrame": "CAN'T MOVE - the frame is wrecked, weld it",
     "IGUI_RR_Derailed": "DERAILED - the locomotive has left the rails",
+    "IGUI_RR_NoTrack": "There is no track under her - she cannot move",
+    "IGUI_RR_TripStop": "Trip stop - emergency brake",
     "IGUI_RR_CarDerailed": "A car is off the rails - the train cannot move",
     "IGUI_RR_CarDead": "Car %1 is broken down - the train cannot move. Weld its frame",
     "IGUI_RR_Passenger": "PASSENGER - you are riding, not driving",
