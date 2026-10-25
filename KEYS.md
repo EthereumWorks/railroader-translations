@@ -2,7 +2,7 @@
 
 Generated from the mod by `tools/sync_translations.py` -- do not edit by hand.
 
-339 strings in 6 files. The Russian column is not a second source: it is there as a worked example of how far you may go from the English (abbreviations on the control stand, a driver's word where English uses two).
+352 strings in 7 files. The Russian column is not a second source: it is there as a worked example of how far you may go from the English (abbreviations on the control stand, a driver's word where English uses two).
 
 A key with an empty value is deliberate -- an empty string means *use the English*, and it is the honest way to leave one alone.
 
@@ -27,8 +27,22 @@ RU  Шкаф
 ### `IGUI_ContainerTitle_rrcbfridge`
 
 ```
-EN  Fridge
-RU  Холодильник
+EN  Mini Fridge
+RU  Минихолодильник
+```
+
+### `IGUI_ContainerTitle_rrcbcupboard`
+
+```
+EN  Cupboard
+RU  Тумбочка
+```
+
+### `IGUI_ContainerTitle_rrcbtoolbox`
+
+```
+EN  Toolbox
+RU  Инструментальный ящик
 ```
 
 ### `IGUI_ContainerTitle_rrcbstove`
@@ -238,6 +252,13 @@ RU  Выключить прожектор
 ```
 EN  (no power - it won't come on)
 RU  (нет питания - свет не загорится)
+```
+
+### `IGUI_RR_CabLightNoPower`
+
+```
+EN  No power - the cab light will not come on
+RU  Нет питания - плафон не загорится
 ```
 
 ### `IGUI_RR_CabLightOn`
@@ -1074,33 +1095,33 @@ RU  СХОД С РЕЛЬСОВ
 
 ```
 EN  BACK ON THE RAILS
-    Right-click her -> 'Rerailing'. Five phases,
-    about four hours of work.
+    Right-click her -> 'Rerailing'. 5 phases, ~4 h.
     Chock the good truck, dig out the ballast,
     jack the derailed one up on packed timber,
     walk it over to the rails, spike two frogs
     down over the railhead. Last phase is the
     PULL: from the seat, with the diesel running.
-    The pull needs a licence, and it can fail at
-    the top and cost an hour back.
+    The pull needs a licence and can fail at the
+    top (an hour back). Three may work at once;
+    on the pull, the cab and ONE man outside.
     KIT: two frogs, track jack, rail chock,
     spike maul, claw bar, six spikes, chain,
     shovel, four planks. The rail gear is kept
     in railroad buildings. Anything in reach does.
 RU  ОБРАТНО НА РЕЛЬСЫ
-    Правый клик по ней -> «Накатка». Пять этапов,
-    около четырёх часов.
+    ПКМ по ней -> «Накатка». 5 этапов, ~4 часа.
     Подбить целую тележку, выбрать балласт,
     вывесить сошедшую домкратом на клетях,
     подтащить к пути, пришить костылями два
     накатных башмака к рельсу. Последний этап -
     вытяжка: из кабины, с работающим дизелем,
     и на неё нужны права. Может сорваться.
+    Работать могут трое; на вытяжке - один в
+    кабине и один снаружи.
     НУЖНО: 2 накатных башмака, домкрат,
     тормозной башмак, костыльный молот, лом,
     6 костылей, цепь, лопата, 4 доски.
-    Путейское держат в ЖД постройках.
-    Годится всё, до чего дотянуться, и с земли.
+    Путейское - в ЖД постройках. Можно с земли.
 ```
 
 ### `IGUI_RR_Note_CarRerail`
@@ -1113,12 +1134,12 @@ EN  CARS OFF THE RAILS
     - or put it back: right-click the car ->
       'Rerailing'. Same kit as for her, lighter
       work: 18 passes, about three hours.
-    Phases 1-4 at the car, from the ground.
+    Phases 1-4 from the ground, up to 3 men.
     Phase 5 is the PULL, by a locomotive: ease
     her onto the car at a walk to couple (faster,
-    she only bumps it), then pull from her cab
-    with the diesel running. Needs her licence
-    and the train-handling book.
+    she only bumps it), then pull from her cab,
+    diesel running, one man outside. Needs her
+    licence and the train-handling book.
     A shove mid-job undoes the work.
 RU  ВАГОН СОШЁЛ С РЕЛЬСОВ
     Сошедший вагон держит весь поезд. Выхода два:
@@ -1127,11 +1148,11 @@ RU  ВАГОН СОШЁЛ С РЕЛЬСОВ
     - или поставить: ПКМ по вагону ->
       «Накатка». Набор тот же, что для локомотива,
       но работы меньше: 18 проходов, около 3 ч.
-    Этапы 1-4 у вагона, с земли.
+    Этапы 1-4 с земли, не больше трёх человек.
     Этап 5 - ВЫТЯЖКА локомотивом: подайте его к
     вагону шагом, чтобы сцепиться (быстрее -
-    только толкнёт), и тяните из кабины
-    с заведённым дизелем. Нужны права на него
+    только толкнёт), и тяните из кабины с
+    дизелем, один снаружи. Нужны права на него
     и книга о вождении поездов.
     Толчок посреди работы сбивает сделанное.
 ```
@@ -1139,9 +1160,9 @@ RU  ВАГОН СОШЁЛ С РЕЛЬСОВ
 ### `IGUI_RR_Note_Caboose`
 
 ```
-EN  CABOOSE (K&L 3, 5, 7, 9)
-    The road kept a few: one by her shed in
-    Muldraugh, others in yards down the line.
+EN  CABOOSE (KL 3, KL 5)
+    The road kept two: often one by her shed
+    in Muldraugh, the other down the line.
     Board by the end stairs; [E] at the end door.
     Bunk to sleep, chairs, two cabinets, a fridge,
     a wood stove, a sink with its own tank.
@@ -1152,9 +1173,9 @@ EN  CABOOSE (K&L 3, 5, 7, 9)
     it drains: lights ~33 h, fridge ~17 h.
     Dry and warm in the cabin, even rolling.
     A broken door: weld a new one (Welding 3).
-RU  КАБУЗ (K&L 3, 5, 7, 9)
-    У дороги их было несколько: один у депо
-    в Малдро, другие на станциях по линии.
+RU  КАБУЗ (KL 3, KL 5)
+    У дороги их было два: часто один у депо
+    в Малдро, другой на станциях по линии.
     Вход по торцевым ступеням; [E] у двери.
     Койка, стулья, два шкафа, холодильник,
     печь на дровах, мойка со своим баком.
@@ -1788,6 +1809,20 @@ EN  Someone else is working on her
 RU  С ней уже кто-то работает
 ```
 
+### `IGUI_RR_Rerail_Reject_CrewFull`
+
+```
+EN  Three are already working on this wreck - there is no room for a fourth
+RU  Здесь уже работают трое - четвёртому места нет
+```
+
+### `IGUI_RR_Rerail_Reject_PullFull`
+
+```
+EN  Someone is already watching the wheel - the pull takes one man in the cab and one outside
+RU  За колесом уже следят - на вытяжке один в кабине и один снаружи
+```
+
 ### `IGUI_RR_Rerail_Reject_TooFar`
 
 ```
@@ -1807,6 +1842,20 @@ RU  Подойдите ближе к вагону
 ```
 EN  Car %1: %2
 RU  Вагон %1: %2
+```
+
+### `IGUI_RR_Rerail_UnitCarNum`
+
+```
+EN  Car %1 (%2): %3
+RU  Вагон %1 (%2): %3
+```
+
+### `IGUI_RR_Rerail_UnitLoco`
+
+```
+EN  Locomotive: %1
+RU  Локомотив: %1
 ```
 
 ### `IGUI_RR_Rerail_Reject_NoLicence`
@@ -2188,6 +2237,13 @@ EN  The faster she goes, the worse the landing. Or hold E at the doorway
 RU  Чем быстрее идёт поезд, тем тяжелее приземление. Или удерживайте E у проёма
 ```
 
+### `IGUI_RR_CarJumpNoRoom`
+
+```
+EN  No clear ground to jump to here - the train would run you over
+RU  Здесь некуда прыгать - поезд переедет
+```
+
 > A boxcar's sliding door: the right-click entries at the door and the red halo over the player when the door cannot be moved. Short: a halo is one line.
 
 
@@ -2364,6 +2420,27 @@ RU  Сначала заберитесь в вагон
 ```
 EN  Electrical panel
 RU  Электрощиток
+```
+
+### `IGUI_RR_CbSleepBunk`
+
+```
+EN  Sleep on the bunk
+RU  Спать на койке
+```
+
+### `IGUI_RR_CbRestBunk`
+
+```
+EN  Rest on the bunk
+RU  Отдохнуть на койке
+```
+
+### `IGUI_RR_NoSleepMovingCar`
+
+```
+EN  You can't lie down on the bunk while the caboose is moving
+RU  Нельзя лечь на койку на ходу
 ```
 
 ### `IGUI_RR_CbLampsOn`
@@ -2786,4 +2863,21 @@ RU  Дизельное топливо
 ```
 EN  Water tank
 RU  Бак для воды
+```
+
+## Moveables.json
+
+
+### `Caboose_Chair`
+
+```
+EN  Wooden Chair
+RU  Деревянный стул
+```
+
+### `Bed`
+
+```
+EN  Bed
+RU  Койка
 ```
