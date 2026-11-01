@@ -1,1 +1,10 @@
-
+{
+    "UI_prof_Railroader": "Eisenbahner",
+    "UI_prof_RailroaderDesc": "Kann jede Lokomotive starten und fahren, ohne die Bedienungsanleitung zu lesen. Ist besser bei Kaltstarts.",
+    "UI_trait_RRRailroader": "Lokführer",
+    "UI_trait_RRRailroader_Desc": "Man kann jede Lokomotive bedienen, ohne das Handbuch zu lesen.<br>Ein kalter Dieselmotor springt häufiger an, und ein Fehlstart kostet die Hälfte der Batterieleistung.",
+    "UI_RR_Opt_Title": "Eisenbahner",
+    "UI_RR_Opt_Desc": "Lautstärke der Lokomotive. Diese Geräusche werden von den spielinternen Audioeinstellungen nicht beeinflusst. Der Diesel-Schieberegler wirkt zusätzlich zum ersten Schieberegler.",
+    "UI_RR_Opt_Master": "Lokomotive: alle Sounds",
+    "UI_RR_Opt_Diesel": "Lokomotive: Dieselmotor"
+}
