@@ -2,7 +2,7 @@
 
 Generated from the mod by `tools/sync_translations.py` -- do not edit by hand.
 
-352 strings in 7 files. The Russian column is not a second source: it is there as a worked example of how far you may go from the English (abbreviations on the control stand, a driver's word where English uses two).
+359 strings in 7 files. The Russian column is not a second source: it is there as a worked example of how far you may go from the English (abbreviations on the control stand, a driver's word where English uses two).
 
 A key with an empty value is deliberate -- an empty string means *use the English*, and it is the honest way to leave one alone.
 
@@ -287,6 +287,55 @@ RU  Сесть на место машиниста
 ```
 EN  Leave the cab
 RU  Покинуть кабину
+```
+
+### `IGUI_RR_LeaveFrontDoor`
+
+```
+EN  Leave by the front door
+RU  Выйти через переднюю дверь
+```
+
+### `IGUI_RR_LeaveRearDoor`
+
+```
+EN  Leave by the rear door
+RU  Выйти через заднюю дверь
+```
+
+### `IGUI_RR_UseLadders`
+
+```
+EN  Climb a corner ladder and walk to a cab door
+RU  Поднимитесь по угловой лестнице и пройдите по обходу к двери кабины
+```
+
+### `IGUI_RR_LocoHoldToJump`
+
+```
+EN  Hold E to jump off
+RU  Удерживайте E, чтобы спрыгнуть
+```
+
+### `IGUI_RR_LocoDoorBlocked`
+
+```
+EN  A zombie is in that doorway
+RU  В этом проёме зомби
+```
+
+### `IGUI_RR_LocoForceOut`
+
+```
+EN  Forcing your way past the zombies
+RU  Прорываешься мимо зомби
+```
+
+### `IGUI_RR_NoFastForwardOnHer`
+
+```
+EN  You can't fast-forward on a moving locomotive
+RU  Нельзя перематывать время на движущемся локомотиве
 ```
 
 > A railroad switch (turnout) and the two roads it can be set for. See GLOSSARY.md before translating 'switch'.
@@ -791,25 +840,29 @@ RU  Остановка отменена - дизель продолжает ра
 ```
 EN  K&L 800, GP7. Muldraugh depot, covered stall.
     Found cold and parked.
-    [E] beside her - board the cab.
-    [E] in the cab - get off (she stops first).
-    Or right-click her: climb in / leave.
+    Up a corner ladder, along the walkway to a
+    cab door. [E] at the door - into the seat.
+    [E] in the seat - pick a door to leave by.
+    Right-click at a door works too.
+    You can walk her moving: get on at a walk.
+    Off while she rolls: hold [E]. It can hurt.
     [V] - cab menu: sleep, headlight, leave.
     Order: board -> reverser to N -> start [W].
-    On a controller: interact climbs in and out.
-    Her controls are on the pad too - see below.
+    Pad: interact at a door. Controls - below.
     On a server: one driver, the rest ride.
     Server only: [V] takes or gives up the controls.
     Log out in the cab - your seat is kept.
 RU  K&L 800, GP7. Депо Малдро, крытое стойло.
     Стоит холодной.
-    [E] у борта -- сесть в кабину.
-    [E] в кабине -- сойти (сначала остановится).
-    Либо ПКМ по ней: сесть / сойти.
+    По угловой лестнице, по обходу к двери
+    кабины. [E] у двери -- сесть на место.
+    [E] на месте -- выбрать дверь для выхода.
+    ПКМ у двери -- то же самое.
+    По обходу можно и на ходу: залезать шагом.
+    Сойти на ходу: держать [E]. Можно убиться.
     [V] -- меню кабины: сон, прожектор, выход.
     Порядок: сесть -> реверсор в N -> пуск [W].
-    На геймпаде: кнопка действия -- сесть и сойти.
-    Органы управления на геймпаде -- дальше.
+    Геймпад: действие у двери. Пульт -- дальше.
     На сервере: один ведёт, остальные едут.
     Только на сервере: [V] занять/уступить пульт.
     Вышел в кабине -- место за тобой.
