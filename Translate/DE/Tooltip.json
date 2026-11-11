@@ -1,0 +1,10 @@
+{
+    "Tooltip_item_RR_ModelManual_GP7": "Die Betriebsanleitung des Herstellers für einen Lokomotivtyp:<br>Bedienelemente, Anfahren, Fahren, was zu tun ist, wenn sie nicht anspringt.<br>Lesen Sie sie durch, dann können Sie eine GP7 im Einzelbetrieb fahren.",
+    "Tooltip_item_RR_TrainHandlingBook": "Das Betriebshandbuch: die automatische Bremse, Bremslockerung, Steigungen, Signale.<br>Der Bremshebel, den Sie bereits kennen, stoppt die Lokomotive und<br>sonst nichts. Ein Zug wird über die Betriebsbremse angehalten und<br>wenn man das falsch macht, rollt der Zug die Steigung hinunter.<br>Lang genug, um mehrere Sitzungen in Anspruch zu nehmen.<br>Vermittelt Kenntnisse über den Zugbetrieb: Kuppeln von Waggons und Zugfahrt.<br>Ohne dies nimmt eine Lokomotive mit angehängten Wagen keine Fahrt auf.",
+    "Tooltip_Recipe_RR_Operate_GP7": "Sie können eine GP7-Lok im Einzelbetrieb starten und fahren.",
+    "Tooltip_Recipe_RR_TrainHandling": "Sie können Wagen koppeln und einen Zug mit der automatischen Bremse steuern.",
+    "Tooltip_item_RR_RailFrog": "Eine Stahlrampe die über den Schienenkopf geklemmt wird, damit ein entgleistes Rad wieder in die Spur zurückgeschoben werden kann.",
+    "Tooltip_item_RR_TrackJack": "Ein 30-Tonnen-Ratschenheber, um einen entgleisten Zug anzuheben und ihn wieder auf die Schienen zu schieben.",
+    "Tooltip_item_RR_RailSkate": "Ein Stahlkeil über dem Schienenkopf, der die Lokomotive an ihrem Standort festhält.",
+    "Tooltip_item_RR_SpikeMaul": "Ein Hammer mit langem Stiel und einer schmalen, beidseitig geschliffenen Schlagfläche zum Einschlagen von Gleisnägeln. Ein Vorschlaghammer erfüllt zwar ebenfalls seinen Zweck, aber genau dafür ist dieses Werkzeug gedacht."
+}
